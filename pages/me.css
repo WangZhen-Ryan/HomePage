@@ -1,0 +1,75 @@
+
+/* some default CSS that will be applied to all the pages */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* change the default front in paragraph */
+p {
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
+}
+
+body{
+	width: 1200px
+}
+
+a{
+	color: #000;
+}
+
+/* make sure the main section and image section are side by side */
+.view{
+	display: inline-block;
+}
+
+/* adjust few padding */
+.view1{
+	width: 50%;
+	padding: 20px 120px;
+	float: left;
+}
+
+.view2{
+	width: 50%;
+	float: right;
+}
+
+/* adjust few padding */
+img{
+	padding: 90px;
+}
+
+/* make the text align to its left */
+#biography{
+	text-align: left;
+}
+
+/* make the social button in a column arrange */
+.twitter-follow-button{
+	display: block;
+
+}
+
+.fb-share-button{
+	display: block;
+	padding-top: 10px;
+	padding-left: 3px;
+}
+
+.linkedin-share-button{
+	display: block;
+	padding-top: 10px;
+	padding-left: 6px;
+}
+
+/* make sure the button section and more contact section are side by side */
+.api-button{
+	width: 50%;
+	float: left;
+}
+
+.more{
+	width: 50%;
+	padding-top: 50px;
+	padding-left: 60px;
+	float: right;
+}

@@ -1,0 +1,27 @@
+fa/* Default setting */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set basic styles for the body */
+body{
+  min-height: 90vh;
+  color: #fff;
+  padding: 40px 10px;
+  background: linear-gradient(to bottom, #353232, #464343);
+}
+
+/* Set styles for the main heading */
+h1{
+  font-size: 2em;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+
+/* Set styles for the image within the main image class and adding a box shadow effect*/
+img{
+  box-shadow: 0 0 15px 0 rgb(0, 0, 0, 90%);
+}

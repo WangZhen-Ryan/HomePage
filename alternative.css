@@ -1,0 +1,852 @@
+#greeting{
+  height: 100vh;
+  background: url("img/self.png") no-repeat;
+  background-size: 100%;
+  background-position: bottom 80px left 60px;
+  /* margin-top: 200px;
+  margin-bottom: 200px; */
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.greeting {
+  max-width: 600px;
+}
+
+.content{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+/* style for the btn display */
+.greeting .btns{
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+
+  display: flex;
+  width: 150px;
+  height: 50px;
+}
+
+/* style for the text anchor inside btn */
+.btns a{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background-color: #ffffff;
+  border: 2px solid #00bbff;
+  border-radius: 8px;
+  font-size: 19px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btns a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00bbff;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+/* .btns a:hover{
+  color: #00bbff;
+} */
+
+.btns a:hover::before{
+  width: 100%;
+
+}
+
+
+
+.greeting h1{
+  position: relative;
+  top: 100px;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.greeting h1::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+
+.greeting h2{
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  padding-top: 20px;
+  color: #00bbff;
+}
+
+.greeting h2::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.greeting p{
+  position: relative;
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+.greeting p::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: showRight 1s ease forwards;
+  animation-delay: 2s;
+}
+
+.bg-effect{
+  position: absolute;
+  top: 100px;
+  right: 5px;
+  width: 600px;
+  height: 100%;
+  background: transparent;
+  /* border: 2px solid #00bbff; */
+  transition: 3s;
+  animation: activeImg 0.1s forwards;
+  animation-delay: 4s;
+  pointer-events: none;
+}
+
+.bg-effect:hover{
+  background: white;
+  opacity: 0.3;
+  transition: 1s;
+  pointer-events: visiblePainted;
+}
+
+.bg-effect::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  animation: showRight 1s ease forwards;
+  animation-delay: 0.01s;
+  z-index: 100;
+}
+
+@keyframes showRight {
+  100%{
+    width: 0;
+  }
+}
+
+@keyframes activeImg {
+  100%{
+    pointer-events: auto;
+  }
+}
+
+
+
+
+/* from here all the rest is the same as style.css */
+
+
+/* Main item section */
+#main {
+
+}
+
+
+/* overwrite container style */
+#main .main{
+ font-size: 20px;
+ flex-direction: column;
+ text-align: center;
+ max-width: 1500px;
+ margin: 0 auto;
+ padding: 0;
+}
+
+
+/* make a style for the main titile */
+#main .main-title{
+ text-align: center;
+ font-size: 6rem;
+ margin-bottom: 50px;
+ color: #404fd5;
+ text-transform: uppercase;
+}
+
+/* color the span part */
+#main .main-title span{
+ color: blueviolet;
+}
+
+/* make a style for text under the main titile */
+#main .main-top p {
+ font-size: 3rem;
+ margin-top: 5px;
+ margin-bottom: 10px;
+ line-height: 2.5 rem;
+ font-weight: 300;
+ letter-spacing: .05rem;
+ color: #283074;
+}
+
+/* align the items */
+#main .main-bottom{
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+ /* flex-direction: row; */
+ margin-top: 50px;
+}
+
+
+/* make a card effect of item */
+/* #main .main-item{
+ 
+ width: 300px;
+ height: 300px;
+ background-color: #404fd5;
+ background-image: url(./img/life.jpg);
+ margin: 20px;
+ border-radius: 10px;
+ overflow: hidden;
+ position: relative;
+ transition: .3s ease;
+ transition-property: transform;
+ box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+} */
+
+/* make a card effect of item1 */
+#main .main-item1 {
+ flex-basis: 80%;
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+
+ padding: 100px 100px;
+ border-radius: 10px;
+ background-image: url(./img/life.jpg);
+ background-size: cover;
+ margin: 10px 5%;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+}
+
+
+/* make a card effect of item2 */
+#main .main-item2 {
+ flex-basis: 80%;
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+
+ padding: 100px 100px;
+ border-radius: 10px;
+ background-image: url(./img/education.jpg);
+ background-size: cover;
+ margin: 10px 5%;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+} 
+/* make a card effect of item3 */
+#main .main-item3 {
+ flex-basis: 80%;
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+
+ padding: 100px 100px;
+ border-radius: 10px;
+ background-image: url(img/work.jpg);
+ background-size: cover;
+ margin: 10px 5%;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+} 
+/* make a card effect of item4 */
+#main .main-item4 {
+ flex-basis: 80%;
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+
+ padding: 100px 100px;
+ border-radius: 10px;
+ background-image: url(img/hobby.jpg);
+ background-size: cover;
+ margin: 10px 5%;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+}
+
+
+/* create a filter so that the card align with bg-img */
+#main .main-item1:hover::after,
+#main .main-item2:hover::after,
+#main .main-item3:hover::after,
+#main .main-item4:hover::after {
+ content: '';
+ position: absolute;
+ left: 0;
+ top: 0;
+ height: 100%;
+ width: 100%;
+ background-image: linear-gradient(10deg, #ffffff 10%, #ffffff 10%);
+ opacity: 0.9;
+ z-index: -1;
+}
+
+
+/* Todo: make the small icon gif*/
+#main .main-bottom .icon{
+ visibility: hidden;
+ height: 30px;
+ width: 30px;
+ /* height: 0px;
+ width: 0px;  */
+ /* visibility: visible;
+ height: 0px;
+ width: 0px; */
+}
+
+/* style the icon */
+#main .main-bottom .icon:hover{
+ visibility: visible;
+
+ margin-bottom: 20px; 
+}
+
+
+
+/* style the h2 heading */
+#services .main-item h2 {
+ font-size: 2rem;
+ color: rgb(0, 0, 0);
+ margin-bottom: 10px;
+ text-transform: uppercase;
+}
+/* style the text */
+#services .main-item p {
+ color: rgb(0, 0, 0);
+ text-align: left;
+}
+/* End of Main item section */
+
+/* Highlight section */
+
+/* Style for the main title of the Highlight section */
+#highlight .section-title {
+ flex-direction: column;
+ text-align: center;
+ font-size: 4rem;
+ margin-bottom: 50px;
+ color: #404fd5;
+ text-transform: uppercase;
+ }
+ 
+ /* Style for the span part of the Highlight section */
+ #highlight .section-title span {
+ color: blueviolet;
+ }
+ 
+ /* Style for the text under the Highlight section title */
+ #highlight .highlights-header p {
+ font-size: 2rem;
+ margin-top: 1px;
+ margin-bottom: 5px;
+ line-height: 2.5 rem;
+ font-weight: 300;
+ letter-spacing: .05rem;
+ color: #283074;
+ }
+ 
+ /* Set the whole Highlight section */
+ #highlight .highlight {
+ display: flex;
+ flex-direction: column;
+ height: 5000000px;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 100px 0;
+
+ }
+ 
+ /* Style for each column of Highlight section */
+ #highlight .all-highlights {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ /* overwrite the pre-wrap for container setting */
+ white-space: nowrap;
+ }
+ 
+ /* Get the card effect of each item in the Highlight section */
+ #highlight .highlights-item {
+ display: flex;
+ align-items: flex;
+ justify-content: center;
+ flex-direction: column;
+ width: 80%;
+ margin: 20px auto;
+ overflow: hidden;
+ border-radius: 10px;
+ }
+ 
+ /* Style for the highlight-info section in Highlight section */
+ #highlight .highlight-info {
+ margin-top: 50px;
+ padding: 60px 10px 60px 10px;
+ flex-basis: 50%;
+ height: 100%;
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+ background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+ color: white;
+ }
+ 
+ /* Style for the h1 in highlight-info section in Highlight section */
+ #highlight .highlight-info h1 {
+ font-size: 4rem;
+ font-weight: 500;
+ }
+ 
+ /* Style for the h2 in highlight-info section in Highlight section */
+ #highlight .highlight-info h2 {
+ font-size: 1.8rem;
+ font-weight: 500;
+ margin-top: 10px;
+ }
+ 
+ /* Style for the p in highlight-info section in Highlight section */
+ #highlight .highlight-info p {
+ color: white;
+ }
+ 
+ /* Style for the highlight-img section in Highlight section */
+ #highlight .highlight-img {
+ flex-basis: 0%;
+ }
+ 
+ /* Style for the highlight-img img section in Highlight section */
+ #highlight .highlight-img img {
+ max-height: 500px;
+ transition: 0.3s ease transform;
+ }
+ 
+ /* Create a scaling effect for highlight-item img*/
+ #highlight .highlights-item:hover .highlight-img img {
+ transform: scale(1.2);
+ }
+ 
+ /* End of Highlight section */
+
+
+
+
+
+
+/* Gallery */
+
+#gallery{
+ margin: 0;
+ padding: 0;
+ width: 100vw;
+ min-height: 1400px;
+ height: 100vh;
+ box-sizing: border-box;
+}
+
+
+/* make a style for the main titile of Highlight*/
+#gallery .gallery-header{
+ flex-direction: column;
+ text-align: center;
+ font-size: 3rem;
+ margin-bottom: 50px;
+ color: #404fd5;
+ text-transform: uppercase;
+}
+
+
+/* make a style for text under the highlights titile */
+#gallery .highlights-header p {
+ font-size: 1.5 rem;
+ margin-top: 1px;
+ margin-bottom: 5px;
+ line-height: 2.5 rem;
+ font-weight: 30;
+ letter-spacing: .05rem;
+ color: #283074;
+}
+
+/* align the items */
+#gallery .gallery-container{
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+ flex-direction: row;
+ top: 40px;
+ left: 50%;
+ margin: 150px 30px;
+}
+
+
+/* styles the label elements */
+.labels {
+ position: relative;
+ display: block;
+ width: 240px;
+ height: 250px;
+ perspective: 1000px;
+ transform-style: preserve-3d;
+ transform: translate(-50%, -50%);
+ cursor: pointer;
+ }
+ 
+ /* styles the individual label elements */
+
+ .label {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   height: 300px;
+   color: rgb(13, 0, 249);
+   }
+ 
+
+ .label1 {
+   position: absolute;
+   top: 50px;
+   left: 150px;
+   height: 300px;
+   color: rgb(90, 89, 89);
+ }
+ 
+ .label2 {
+   position: absolute;
+ top: 330px;
+ left: 30px;
+ height: 300px;
+ color: rgb(225, 62, 33);
+ }
+ 
+ .label3 {
+ position: absolute;
+ top: 230px;
+ left: 250px;
+ height: 300px;
+ color: green;
+ }
+
+
+ /* styles the flip-card container */
+ #gallery .flip-card {
+ width: 100%;
+ height: 100%;
+ transform-style: preserve-3d;
+ transition: all 0.5s ease-in-out;
+ z-index: 1;
+ }
+ 
+ /* styles the front and back of the flip-card container */
+ #gallery .flip-card .front,
+ #gallery .flip-card .back {
+ position: absolute;
+
+ text-align: center;
+ background: rgba(206, 235, 243, 0);
+ backface-visibility: hidden;
+ border-radius: 0 20px 0 20px;
+ }
+ 
+ /* styles the back of the flip-card container */
+ #gallery .flip-card .back {
+
+ transform: rotateX(180deg);
+ color: white;
+ background: rgba(194, 194, 242, 0.861);
+ }
+ 
+ /* styles the flip-card container when hovering over the label element */
+ label:hover .flip-card {
+  
+ transform: rotateX(2deg);
+ box-shadow: 0 20px 20px rgba(50, 60, 60, 0.2);
+ }
+ 
+ /* styles the flip-card container when the label is clicked */
+ input {
+   display: none;
+ }
+ 
+ :checked + .flip-card {
+ transform: rotateX(180deg);
+ }
+ 
+ /* styles the flip-card container when hovering over the checked label */
+ label:hover :checked + .flip-card {
+ transform: rotateX(175deg);
+ box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+ }
+ 
+ /* styles the front of the flip-card container */
+ #gallery .front img {
+ width: 110px;
+ height: 110px;
+ margin: 30px 0 20px 0;
+ border-radius: 50%;
+ }
+ 
+ #gallery .front h1 {
+ font-size: 18px;
+ color: #003871;
+ margin: 0;
+ }
+ #gallery .front h2 {
+ font-size: 12px;
+ color: #9b9cff;
+ margin: 6px 0 6px 0;
+ }
+ 
+ #gallery .front b {
+ font-size: 10px;
+ color: #bdbdf6;
+ margin: 0 0 3px 0;
+ display: block;
+ }
+ 
+ #gallery .front p,
+ #gallery .back .click {
+ font-size: 10px;
+ font-weight: 500;
+ }
+ 
+ /* styles the back of the flip-card container */
+ #gallery .back h1 {
+ color: #ffffff;
+ margin: 30px 0 0 0;
+ }
+ 
+ hr {
+ width: 180px;
+ margin: 15px auto 10px auto;
+ }
+ 
+ #gallery .back p {
+ font-size: 16px;
+ color: #ffffff;
+ padding: 0
+ }
+
+/* End of Gallery */
+.spacer {
+ flex: 1 0 auto;
+}
+/* Footer */
+
+/* color the background */
+#footer {
+ background-color: #6b6b6c;
+ width: 100%;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ position: relative;
+ max-height: 1%;
+ padding: 0; 
+ margin: 0;
+}
+
+
+/* style the footer in column direction */
+#footer .footer {
+ flex-direction: column;
+ padding: 20px;
+ position: relative;
+ bottom: 0;
+ width: 100%;
+}
+
+/* style the footer's text*/
+#footer h2 {
+ color: white;
+ font-weight: 500;
+ font-size: 1.8rem;
+ letter-spacing: 0.1rem;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+#footer h1 {
+ color: rgb(2, 2, 2);
+ font-weight: 500;
+ font-size: 3rem;
+ letter-spacing: 0.1rem;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+/* style the footer's bottom text*/
+#footer p {
+ color: white;
+ font-size: 1.3rem;
+}
+
+
+/* style the footer's nav menu*/
+
+#footer .row-dir {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ text-align: left;
+ box-sizing: content-box;
+ margin: 0;
+ padding: 0;
+ letter-spacing: normal;
+}
+
+.top-title {
+ 
+ display: flex;
+ vertical-align: middle;
+ margin: 0;
+ padding: 20px;
+}
+
+
+/* style the footer's nav menu more*/
+
+#footer nav {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto;
+ max-width: 10px; /* optional, to limit the width of the nav menu */
+}
+
+#footer ul {
+ text-align: left;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ 
+}
+
+#footer li {
+ display: flex;
+ margin: 0px 0px;
+ margin-right: 60px;
+ margin-left: 20px;
+}
+
+/* force the font to be different */
+#footer a {
+ font-size: 10px;
+ font-family: Arial, sans-serif;
+ color: #edecec;
+}
+
+/* force the aligment of h3 */
+#footer nav h3{
+ color: rgb(3, 3, 3);
+ font-size: 1.5rem;
+ font-weight: 500;
+ margin: 0;
+ padding: 0;
+ text-align: left;
+}
+
+
+/* add hover effect to list items */
+#footer a:hover {
+ color: #666;
+}
+
+#footer a:active {
+ color: #000;
+}
+/* End Footer */
+
+
+/* Keyframes */
+/* Define keyframes for text reveal animation using boxes */
+@keyframes text_reveal_box {
+ 50% {
+ width: 100%;
+ left: 0;
+ }
+ 100% {
+ width: 0;
+ left: 100%;
+ }
+ }
+ 
+ /* Define keyframes for text reveal animation using color */
+ @keyframes text_reveal {
+ 100% {
+ color: white;
+ width: 100%;
+ left: 0;
+ }
+ }
+ 
+ /* Define keyframes for text reveal animation using disc */
+ @keyframes text_reveal_disc {
+ 100% {
+ color: blue;
+ width: 100%;
+ left: 0;
+ }
+ }
+
+ /* End of Keyframes */

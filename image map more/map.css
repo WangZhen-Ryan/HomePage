@@ -1,0 +1,149 @@
+fa/* Default setting */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set basic styles for the body */
+body{
+  min-height: 90vh;
+  color: #fff;
+  padding: 40px 10px;
+  background: linear-gradient(to bottom, #353232, #464343);
+}
+
+/* Set styles for the main heading */
+h1{
+  font-size: 2em;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Set styles for the main container */
+.container{
+  max-width: 100vw;
+  margin: auto;
+  padding: auto;
+}
+
+
+
+/* Set styles for the main image class */
+.img-class{
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+/* Set styles for the image within the main image class and adding a box shadow effect*/
+.img-class img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 15px 0 rgb(0, 0, 0, 90%);
+}
+
+/* Set styles for the dots used to navigate the image */
+.dot{
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  background: #f30404;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+/* Set styles for the animation of the dots that is centering it vertically and horizontally inside the dot element. */
+.dot:after{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1,1);
+  pointer-events: none;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid #0e1dea;
+  transition: border-color 1s linear;
+  animation: dot-pulse 4s linear infinite;
+}
+
+/* Set styles for the animation that makes the dot appear to pulse with increasing and decreasing opacity.*/
+@keyframes dot-pulse{
+
+  0%{
+    transform: translate(-50%, -50%) scale(1,1);
+    opacity: 0;
+  }
+
+  20%{
+    transform: translate(-50%, -50%) scale(1.5,1.5);
+    opacity: 0.9;
+  }
+
+  50%{
+    transform: translate(-50%, -50%) scale(2,2);
+    opacity: 0.9;
+  }
+
+  100%{
+    transform: translate(-50%, -50%) scale(2,2);
+    opacity: 0.9;
+  }
+}
+
+/* Set styles for the individual items in the image class */
+.item{
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* Set styles for the item descriptions */
+.descrption{
+  position: absolute;
+  padding: 15px;
+  width:13em;
+  height: 7em;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  line-height: 1.5em;
+  z-index: -1;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+/* Set styles for the item description when hovering over it */
+.item:hover .descrption{
+  opacity: 1;
+  z-index: 1;
+}
+  
+/* Set styles for the item title */
+.descrption h3{
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* the france box is blocking the SH box, fix it by rotate it to the upper */
+.img-class .f .descrption{
+  left: calc(50% -11.5em);
+  bottom: 40px;
+}
+
+
+/* define the clickable area as square */
+.item a {
+  padding: 0 3em; 
+  margin: 0 -3em;
+}
+

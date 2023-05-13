@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<!-- This is the HEADER section.......................... -->
+
+<head>
+  <meta charset="utf-8">
+  <title>About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../default.css">
+  <link rel="stylesheet" href="../header.css">
+  <link rel='stylesheet' href='me.css'>
+</head>
+<!-- The header section -->
+<header class="main-header">
+  <!-- Logo and navigation menu section -->
+  <div class="header-logo">
+    <img src="../img/icon.png" alt="my logo">
+
+    <!-- the hamburger -->
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <nav class="header-nav">
+      <ul>
+        <li><a href="sitemap.html">HOME</a></li>
+        <li><a href="../image gallery/gallery.html">GALLERY</a></li>
+        <li><a href="https://wangzhen-ryan.github.io">PORTFOLIO</a></li>
+        <li><a href="me.html">ABOUT ME</a></li>
+        <li><a href="feedback.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Social media links section -->
+  <div class="header-social-media">
+    <a href="https://www.facebook.com/zhen.wang.98229">
+      <div class="header-social-media-fb"></div>
+    </a>
+    <a href="https://twitter.com/home">
+      <div class="header-social-media-tw"></div>
+    </a>
+    <a href="https://www.linkedin.com/in/wangzhen-ryan/">
+      <div class="header-social-media-linkedin"></div>
+    </a>
+    <a href="https://github.com/WangZhen-Ryan">
+      <div class="header-social-media-github"></div>
+    </a>
+  </div>
+</header>
+<!-- End of header section -->
+
+<!-- This is the BODY section -->
+
+<body>
+
+  <!-- the meta api -->
+  <div id="fb-root"></div>
+  <script>(function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div>
+    <div class="view1" id="biography">
+
+      <h1> Biography </h1>
+
+
+      <!-- This is our introductory paragraph -->
+
+      <p> Welcome to my personal portfolio! My name is Zhen Wang, also known as Ryan. I came to Australia four years ago
+        to pursue my undergraduate degree,
+        and I am now about to graduate with a Bachelor of Advanced Computing (Honours) from the Australian National
+        University.</p>
+
+      <p>
+
+        This website is a showcase of my life, education, and work experience. I have a passion for data science and
+        machine learning,
+        and I am eager to launch my career in this field.
+        I hope to connect the dots of my journey over the past few years through a timeline that highlights my
+        achievements and milestones.</p>
+
+      <p>In addition to my work, I have a love for basketball and try to play it every day.
+        I used to go to the gym four times a week, but I have been neglecting this hobby lately due to my busy schedule.
+        I am trying to pick it up again because I believe it's easier to continue doing something than to start from
+        scratch.
+        I also enjoy hiking, although my options are limited in Canberra.
+        Thank you for visiting my website and learning more about me</p>
+      </p>
+
+  
+      <!-- a collection of different api usage -->
+      <div class="api-button">
+        <h2> Follow Me</h2>
+        <a class="twitter-follow-button" href="https://twitter.com/WangZhen_Ryan" data-size="large"
+        data-show-screen-name=false>Follow @TwitterDev</a>
+        <a class="fb-share-button" data-href="https://www.facebook.com/zhen.wang.98229" data-layout="button"
+          data-size="large">
+        </a>
+        <div class="linkedin-share-button">
+          <script  src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+          <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+        </div>
+      </div>
+
+      <!-- contact section-->
+      <div class = "more">
+        <h6>thanks for stopping by.
+            Still curious? <br> 
+            → wangzhen-ryan@icloud.com</h6> 
+        <h6>© Ryan Wang 2023</h6>
+      </div>
+
+
+
+    </div>
+
+    <!-- This is the image section -->
+    <div class="view2" id="img-container">
+      <img src="../img/about.png" width="40px">
+    </div>
+  </div>
+
+</body>
+<!-- The script for twitter api -->
+<script>window.twttr = (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function (f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v16.0"
+  nonce="tdE82UFR"></script>
+
+</html>

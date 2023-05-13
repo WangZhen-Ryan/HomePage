@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="header.css">
+    <title>My Changed Homepage</title>
+</head>
+<body>
+    <!-- The header section -->
+    <header class="main-header">
+        <!-- Logo and navigation menu section -->
+        <div class="header-logo">
+        <img src="img/icon.png" alt="my logo">
+
+        <!-- the hamburger -->
+        <div class = "hamburger">
+            <div class = "line"></div>
+            <div class = "line"></div>
+            <div class = "line"></div>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+            <li><a href="pages/sitemap.html">HOME</a></li>
+            <li><a href="image gallery/gallery.html">GALLERY</a></li>
+            <li><a href="https://wangzhen-ryan.github.io">PORTFOLIO</a></li>
+            <li><a href="pages/me.html">ABOUT ME</a></li>
+            <li><a href="pages/feedback.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        </div>
+        <!-- Social media links section -->
+        <div class="header-social-media">
+        <a href="https://www.facebook.com/zhen.wang.98229"><div class="header-social-media-fb"></div></a>
+        <a href="https://twitter.com/home"><div class="header-social-media-tw"></div></a>
+        <a href="https://www.linkedin.com/in/wangzhen-ryan/"><div class="header-social-media-linkedin"></div></a>
+        <a href="https://github.com/WangZhen-Ryan"><div class="header-social-media-github"></div></a>
+        </div>
+    </header>
+    <!-- add js for onlick event of hamburger-->
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function(){
+            var html = document.getElementsByTagName('html')[0];
+            var body = document.getElementsByTagName('body')[0];
+            var all = [html,body];
+            all.forEach(element => {
+                element.classList.toggle("active");
+            });
+            navMenu = document.querySelector(".header-nav");
+            navMenu.classList.toggle("active");
+        }
+
+    </script>
+    <!-- End of header section -->
+
+    <!-- Greeting Section -->
+    <section id="greeting">
+        <div class="greeting container">
+            <div class = "background-image"></div>
+            <div class = "content">
+                <h1>Hi, I'm Zhen (Ryan) Wang<span></span></h1>
+                <h2>A boy born in Shanghai <span></span></h2>
+                <p id="p1" class="hello__text"> Welcome to my Homepage</p>
+                <!-- <a href="https://wangzhen-ryan.github.io" type="button" class = "cta">Portfolio</a> -->
+            </div>
+
+
+            <div class = "btns">
+                <a onclick="myFunction()"> View </a>
+            </div>
+        </div>
+
+
+        <span class = "bg-effect"></span>
+
+        <!-- add js for onlick event of hamburger-->
+        <script>
+            function checkIfIncluded(file) {
+                var links = document.getElementsByTagName("link");
+                for(var i = 0; i < links.length; i++) {
+                    if (links[i].href.substr(-file.length) == file)
+                        return true;
+                }
+            
+                var scripts = document.getElementsByTagName("script");
+                for(var i = 0; i < scripts.length; i++) {
+                    if (scripts[i].src.substr(-file.length) == file)
+                        return true;
+                }
+            
+                return false;
+            }
+
+            function myFunction() {
+                //document.getElementById("p1").innerHTML = "New text!";
+
+
+                if (checkIfIncluded("alternative.css"))
+                {
+                    var head  = document.getElementsByTagName('head')[0];
+                    var link  = document.createElement('link');
+                    link.id   = 'styleCss';;
+                    link.rel  = 'stylesheet';
+                    link.type = 'text/css';
+                    link.href = 'style.css';
+                    link.media = 'all';
+                    head.appendChild(link);
+
+                    //remove the old css
+                    var linkNode = document.querySelector('link[href*="alternative.css"]');
+                    head.removeChild(linkNode);
+                }else{
+                    var head  = document.getElementsByTagName('head')[0];
+                    var link  = document.createElement('link');
+                    link.id   = 'alternativeCss';;
+                    link.rel  = 'stylesheet';
+                    link.type = 'text/css';
+                    link.href = 'alternative.css';
+                    link.media = 'all';
+                    head.appendChild(link);
+
+                    //remove the old css
+                    var linkNode = document.querySelector('link[href*="style.css"]');
+                    head.removeChild(linkNode);
+                }
+            }
+
+        </script>
+
+    </section>
+    <!-- End Greeting Section -->
+  <!-- End Footer -->
+</body>
+</html>
+

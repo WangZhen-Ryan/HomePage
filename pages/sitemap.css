@@ -1,0 +1,26 @@
+/* style the body */
+
+main {
+	margin: 20px;
+}
+
+/* set up the space between main header with list header*/
+main ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+main ul li {
+	margin-bottom: 10px;
+}
+
+/* set up the space between list header and items below */
+main ul ul {
+	margin-top: 5px;
+	margin-left: 20px;
+}
+
+main ul ul li {
+	margin-bottom: 5px;
+}

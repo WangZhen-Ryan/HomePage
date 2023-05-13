@@ -1,0 +1,46 @@
+
+/* some default CSS that will be applied to all the pages */
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&display=swap');
+
+* { 
+  padding: 10;
+  margin: 10;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.container {
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: pre-wrap;
+  flex-direction: column;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+
+/* hover effect to indiate clickable links */
+a:hover {
+  color: rgb(34, 0, 255);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* End of default*/

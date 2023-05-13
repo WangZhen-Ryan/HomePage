@@ -1,0 +1,224 @@
+/* The Main Header Style */
+
+.main-header{
+  display: flex;
+  background-color: rgba(180, 175, 221, 0.01);
+  height: 60px;
+  width: 100%;
+  justify-content: space-between; /* align items horizontally */
+}
+
+a {
+  cursor: pointer;
+}
+
+/* Header Logo Style */
+.header-logo{
+  display: flex;
+  height: 100%;
+}
+
+/* resize the logo so that the header fits */
+.header-logo img{
+  width: fit-content;
+  height: 50px;
+  align-self: center; /* align the item vertically */
+  margin-left: 20px;
+}
+
+.hamburger{
+  display: none;
+}
+
+/* Header Navigation Style */
+.header-nav{
+  height: 100%;
+  width: fit-content;
+  padding-top: 10px;
+}
+
+/* make the nav list ranged in a row */
+.header-nav ul{
+  list-style: none;
+}
+
+.header-nav ul li{
+  display: inline-block;
+}
+
+/* Style for nav links */
+.header-nav ul li a {
+  margin: 0;
+  padding: 10px 20px 10px 20px; /* add padding to the left and right of the link */
+  align-items: center;
+  color: #000;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+/* Hover style for nav links */
+.header-nav ul li a:hover {
+  color: #3c41d4;
+  background-color: #868686;
+}
+
+/* Header Social Media Style */
+.header-social-media{
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+  padding-right: 60px;
+  display: flex;
+
+}
+
+/* Hover style for social media icons */
+.header-social-media a:hover{
+  opacity: 0.7;
+}
+
+/* Facebook icon style */
+.header-social-media-fb{
+  width: 40px;
+  height: 40px;
+  background-image: url(img/facebook.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Twitter icon style */
+.header-social-media-tw{
+  width: 40px;
+  height: 40px;
+  background-image: url(img/twitter.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* LinkedIn icon style */
+.header-social-media-linkedin{
+  width: 40px;
+  height: 40px;
+  background-image: url(img/linkedin.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Github icon style */
+.header-social-media-github{
+  width: 40px;
+  height: 40px;
+  background-image: url(img/github.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.dropdown_menu{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 20%);
+  z-index: 1;
+}
+
+/* dynamic adjust the display from nav to hamburger according to the width */
+@media only screen and (max-width: 1300px) {
+  .header-nav{
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header-nav{
+    display: 10px 10px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  /* style the hamburger*/
+  .hamburger{
+    position: fixed;
+    top: 5px;
+    right: 6px;
+    display: block;
+    cursor: pointer;
+    padding: 15px 20px;
+  }
+  .hamburger .line{
+    width: 30px;
+    height: 3px;
+    background:rgb(129, 127, 127);
+    margin: 6px 1px;
+  }
+
+
+  /* not display social media */
+  .header-social-media{
+    display: none;
+  }
+  
+   
+  /* resize the logo so that the header fits */
+  .header-logo img{
+    width: fit-content;
+    height: 50px;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    align-self: center; /* align the item vertically */
+    margin-left: 20px;
+  }
+
+  /* resize the hearder */
+  .header-nav{
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 100px;
+    right: 0;
+    width: 50vw;
+    background: #fff;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+ /* resize the hearder when click hamburger*/
+  .header-nav.active{
+    height: 130px;
+  }
+
+  .header-nav ul{
+    display: block;
+    float: left;
+    margin: 15px auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  /* reformate the hearder list when click hamburger*/
+  .header-nav.active ul{
+    opacity: 1;
+  }
+
+
+  html, body {
+    overflow: auto;
+  }
+  
+  /* add some space by padding the bg image when clicked*/
+  html body.active {
+    overflow: hidden;
+    padding-top: 65px;
+    position: fixed;  
+    }
+
+}
+

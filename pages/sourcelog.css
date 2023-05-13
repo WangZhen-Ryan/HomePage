@@ -1,0 +1,62 @@
+html {
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+body {background-color: white}
+
+/* The main header */
+h1 {
+      color: black;
+      font-size: 30px;
+}
+
+/* set the table style */
+table{
+    /* the source log table is put 50px below the heading of “Source Log” */
+    margin-top: 50px;
+
+    /* the table is as wide as 80% of the window size */
+    width: 80%;
+    /* the table has a single line blue border that is 2px wide */
+    border-color: skyblue;
+    border-style: solid;
+    border-width: 2px; 
+
+    /* the texts in the table are left-aligned */
+    text-align: left;
+    
+    font-size: 14px;
+    border-collapse: collapse;
+    caption-side: top;
+}
+
+/* an italic, blue caption with a font size of 13px */
+caption{
+    font-style: italic;
+    font-size: 16px;
+    color: skyblue;
+}
+
+/* set table color and padding */
+th{
+    background-color:skyblue;
+    border-color: skyblue;
+    color: white;
+    /* the texts in the table are 10px away from the border */
+    padding-left: 10px; 
+    font-size: 15px;
+}
+
+/* set table's element row color and padding */
+td{
+    border-color: skyblue;
+    padding-left: 10px;
+}
+
+
+
+/* optional styling for highlighting table row on hover */
+tr:hover {
+    background-color: #f5f5f5;
+}

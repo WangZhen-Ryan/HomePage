@@ -1,0 +1,70 @@
+/* Set style for the entire form */
+form {
+  background-color: #f2f2f2;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  }
+  
+  /* Set style for the label text */
+  label {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+  }
+  
+  /* Set style for the button */
+  .button {
+  background-color: lightblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  }
+  
+  /* Set style for input text and text area */
+  input[type=text], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  }
+  
+  /* Set style for input text and text area when focused */
+  input[type=text]:focus, textarea:focus {
+  outline: none;
+  border: 2px solid dodgerblue;
+  }
+  
+  /* Set style for submit and reset buttons */
+  input[type=submit], input[type=reset] {
+  background-color: lightblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  }
+  
+  /* Set style for reset button */
+  input[type=reset] {
+  background-color: grey;
+  }
+  
+  /* Set style for submit and reset buttons when hovered */
+  input[type=submit]:hover, input[type=reset]:hover {
+  background-color: dodgerblue;
+  }
+  
+  /* Set style for submit and reset buttons when clicked */
+  input[type=submit]:active, input[type=reset]:active {
+  transform: translateY(1px);
+  }

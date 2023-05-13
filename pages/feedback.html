@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<!-- This is the HEADER section.......................... -->
+
+<head>
+  <meta charset="utf-8">
+  <title>Feedback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='feedback.css'>
+  <link rel="stylesheet" href="../default.css">
+</head>
+
+<!-- This is the BODY section -->
+
+<body>
+  <!-- header -->
+  <h1>Feedback Form</h1>
+  <form action="mailto:15000059524@163.com" method="post">
+    <!-- your name box -->
+    <label for="fname">Your Name</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Your name is..." ><br>
+    <!-- your email box -->
+    <label for="email">Your email address</label><br>
+    <input type="text" id="email" name="email" placeholder="Your email is..."><br>
+
+    <!-- choice box -->
+    <!-- <label for="gender">What is your gender?</label><br>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other
+    <input type="radio" name="gender" value="not say"> I prefer not to say<br> -->
+
+    <!-- choice box -->
+    <label for="like">How do you like my site?</label>
+    <input type="radio" name="gender" value="very much"> I like it very much
+    <input type="radio" name="gender" value="a little "> A little bit
+    <input type="radio" name="gender" value="ok"> I think it is ok
+    <input type="radio" name="gender" value="no"> I don't like it<br>
+    <br>
+
+    <!-- feedback box -->
+    <label for="feedback">Please fill in your feedback regarding how to improve this site?</label>
+    <textarea name="message" rows="10" cols="30" placeholder="Please type your feedback here..."></textarea><br>
+    
+    <!-- buttons -->
+    <hr>
+
+    <input type="reset" value="Clear">
+    <input type="submit" value="Send it" method="post">
+    <hr>
+    </form>
+</body>
+
+</html>

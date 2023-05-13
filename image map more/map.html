@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Footprint</title>
+    <link rel="stylesheet" href="map.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>The Travel Map</h1>
+
+      <!-- define the class for labels -->
+      <div class="img-class">
+        <!-- add background image -->
+        <img src="worldmap.png" alt="img class" usemap="#travelmap">
+        <!-- add labels -->
+        <!--address dynamic window size using percentage position -->
+        <!-- each label(item) have the dot point on the map and the corresponding description text -->
+        <div class="item a" style="top:72%; left: 83%;">
+          <a href="https://en.wikipedia.org/wiki/Canberra"><div class="dot"></div></a> 
+          <div class="descrption">
+            <h3>Canberra</h3>
+            <p>I came to cbr in 2019 for university and stays ever since.</p>
+          </div>
+        </div>
+
+        <!-- add labels -->
+        <div class="item b" style="top:40%; left: 80%;">
+          <a href="https://en.wikipedia.org/wiki/Shanghai"><div class="dot"></div></a> 
+          <div class="descrption">
+            <h3>Shanghai</h3>
+            <p>i was born in SH.</p>
+          </div>
+        </div>
+
+        <!-- add labels -->
+        <div class="item c" style="top:67%; left: 86%;">
+          <a href="https://en.wikipedia.org/wiki/Sydney"><div class="dot"></div></a> 
+          <div class="descrption">
+            <h3>Sydney</h3>
+            <p>I travel and work in Syd.</p>
+          </div>
+        </div>
+
+        <!-- add labels -->
+        <div class="item d" style="top: 37%; left: 15%;">
+          <a href="https://en.wikipedia.org/wiki/Vancouver"><div class="dot"></div></a> 
+          <div class="descrption">
+            <h3>Vancouver</h3>
+            <p>In junior school, I spent 4 months attending summer school in Vancouver.</p>
+          </div>
+        </div>
+
+        <!-- add labels -->
+        <div class="item e" style="top: 40%; left: 28%;">
+          <a href="https://en.wikipedia.org/wiki/United_States"><div class="dot"></div></a> 
+          <div class="descrption">
+            <h3>US</h3>
+            <p>I visited several US cities, including New York, Los Angeles and Boston in summer.</p>
+          </div>
+        </div>
+        
+        <!-- add labels -->
+        <div class="item f" style="top: 34%; left: 52%;">
+          <a href="https://en.wikipedia.org/wiki/Euro"><div class="dot"></div></a> 
+          <div class="descrption">
+            <h3>France</h3>
+            <p>I visited France, Germany and Italian in summer.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <script src="map.js"></script>
+  </body>
+</html>

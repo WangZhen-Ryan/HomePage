@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="header.css">
+    <!-- <link rel="stylesheet" href="alternative.css"> -->
+    <title>My Website Homepage</title>
+</head>
+<body>
+    <!-- The header section -->
+    <header class="main-header">
+        <!-- Logo and navigation menu section -->
+        <div class="header-logo">
+        <img src="img/icon.png" alt="my logo">
+
+        <!-- the hamburger -->
+        <div class = "hamburger">
+            <div class = "line"></div>
+            <div class = "line"></div>
+            <div class = "line"></div>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+            <li><a href="pages/sitemap.html">HOME</a></li>
+            <li><a href="image gallery/gallery.html">GALLERY</a></li>
+            <li><a href="https://wangzhen-ryan.github.io">PORTFOLIO</a></li>
+            <li><a href="pages/me.html">ABOUT ME</a></li>
+            <li><a href="pages/feedback.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        </div>
+        <!-- Social media links section -->
+        <div class="header-social-media">
+        <a href="https://www.facebook.com/zhen.wang.98229"><div class="header-social-media-fb"></div></a>
+        <a href="https://twitter.com/home"><div class="header-social-media-tw"></div></a>
+        <a href="https://www.linkedin.com/in/wangzhen-ryan/"><div class="header-social-media-linkedin"></div></a>
+        <a href="https://github.com/WangZhen-Ryan"><div class="header-social-media-github"></div></a>
+        </div>
+    </header>
+    <!-- add js for onlick event of hamburger-->
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function(){
+            var html = document.getElementsByTagName('html')[0];
+            var body = document.getElementsByTagName('body')[0];
+            var all = [html,body];
+            all.forEach(element => {
+                element.classList.toggle("active");
+            });
+            navMenu = document.querySelector(".header-nav");
+            navMenu.classList.toggle("active");
+        }
+
+    </script>
+    <!-- End of header section -->
+
+    <!-- Greeting Section -->
+    <section id="greeting">
+        <div class="greeting container">
+            <div class = "background-image"></div>
+            <div class = "content">
+                <h1>Hi, I'm Zhen (Ryan) Wang<span></span></h1>
+                <h2>A boy born in Shanghai <span></span></h2>
+                <p id="p1" class="hello__text"> Welcome to my Homepage</p>
+                <!-- <a href="https://wangzhen-ryan.github.io" type="button" class = "cta">Portfolio</a> -->
+            </div>
+
+
+            <div class = "btns">
+                <a onclick="myFunction()"> View </a>
+            </div>
+        </div>
+
+
+        <span class = "bg-effect"></span>
+
+        <!-- add js for onlick event of hamburger-->
+        <script>
+            function checkIfIncluded(file) {
+                var links = document.getElementsByTagName("link");
+                for(var i = 0; i < links.length; i++) {
+                    if (links[i].href.substr(-file.length) == file)
+                        return true;
+                }
+            
+                var scripts = document.getElementsByTagName("script");
+                for(var i = 0; i < scripts.length; i++) {
+                    if (scripts[i].src.substr(-file.length) == file)
+                        return true;
+                }
+            
+                return false;
+            }
+
+            function myFunction() {
+                document.getElementById("p1").innerHTML = "New text!";
+
+
+                if (checkIfIncluded("alternative.css"))
+                {
+                    var head  = document.getElementsByTagName('head')[0];
+                    var link  = document.createElement('link');
+                    link.id   = 'styleCss';;
+                    link.rel  = 'stylesheet';
+                    link.type = 'text/css';
+                    link.href = 'style.css';
+                    link.media = 'all';
+                    head.appendChild(link);
+
+                    //remove the old css
+                    var linkNode = document.querySelector('link[href*="alternative.css"]');
+                    head.removeChild(linkNode);
+                }else{
+                    var head  = document.getElementsByTagName('head')[0];
+                    var link  = document.createElement('link');
+                    link.id   = 'alternativeCss';;
+                    link.rel  = 'stylesheet';
+                    link.type = 'text/css';
+                    link.href = 'alternative.css';
+                    link.media = 'all';
+                    head.appendChild(link);
+
+                    //remove the old css
+                    var linkNode = document.querySelector('link[href*="style.css"]');
+                    head.removeChild(linkNode);
+                }
+            }
+
+        </script>
+
+    </section>
+    <!-- End Greeting Section -->
+
+    <!-- main section -->
+    <section id = "main">
+        <div class = "main container">
+            <div class="main-top">
+                <h1 class="main-title">More <span>A</span>bout Me</h1>
+                <p>
+                A student at the ANU, with Machine Learning Background, but appreciate the data science and web development.
+                </p>
+            </div>
+            <div class="main-bottom">
+                <!-- First item  -->
+                <a class="main-item1" href = "image gallery/gallery.html">
+                    <div class="icon"><img src="./img/literature.gif" ></div>
+                    <h2>Life</h2>
+                    <p>I was born in Shanghai and come to Australia in 2019.</p>
+                </a>
+
+                <!-- Second item  -->
+                <a class="main-item2" href = "https://wangzhen-ryan.github.io">
+                    <div class="icon"><img src="./img/school.png"></div>
+                    <h2>Education</h2>
+                    <p>Graduating in 2023 June</p>
+                </a>
+
+                 <!-- Third item  -->
+                <a class="main-item3" href = "#">
+                    <div class="icon"><img src="./img/ach.gif"></div>
+                    <h2>Work</h2>
+                    <p>Future Jobs</p>
+                </a>
+
+                <!-- Fourth item  -->
+                <a class="main-item4" href = "#">
+                    <div class="icon"><img src="./img/hobby.gif"></div>
+                    <h2>Hobby</h2>
+                    <p>Passionate Basketball player</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End of main section -->
+
+
+    <!-- highlights Section -->
+    <section id="highlight">
+        <div class="highlights container">
+            <div class="highlights-header">
+                <h1 class="section-title"> Recent <span>Highlights</span></h1>
+                <p>This is the section that some of the dots I want to share with you.</p>
+            </div>
+
+            <div class="all-highlights">
+                <div class="highlights-item">
+                    <div class="highlight-info">
+                    <h1>We finally got our dog in 2022</h1>
+                    <h2>Caramel</h2>
+                    <p>We named she Caramel. She is the quietest among her brother and sister. 
+                        We pick her up from Sydney, and now she has a home.
+                    </p>
+                    </div>
+                    <div class="highlight-img">
+                    <img src="./img/caramel.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="highlights-item">
+                    <div class="highlight-info">
+                    <h1>I finished my Honours in Nov 2022</h1>
+                    <h2>Struggling but fun</h2>
+                    <p>Never want to do more research hahaha. I admire those people who had the courage to enter a PHD.</p>
+                    </div>
+                    <div class="highlight-img">
+                    <img src="./img/book.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End highlights Section -->
+
+
+<!-- Gallery Section -->		
+    <section id="gallery">
+        <div class = "gallery-container">
+            <div class="gallery-header">
+                <h1 class="section-title"> Connection <span>People</span></h1>
+                <p>This is the section that shares my close connections</p>
+            </div>
+            <div class = "labels">
+
+                <label class = 'label'>
+                    <input type="checkbox">
+                    <div class="flip-card">
+                        <div class="front">
+                            <img src="img/xinyi.jpg" alt="" />
+                            <h1>Xinyi Wang</h1>
+                            <h2>Phd in Chemistry</h2>
+                            <b>alicebluree@icloud.com</b>
+                            <p>Click to flip</p>
+                        </div>
+                        <div class="back">
+                            <h1>Partner</h1>
+                            <p>She is about to start a phd. I can only say Good luck.</p>
+                            <hr />
+                            <p class="click">Click to flip</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class = 'label1'>
+                    <input type="checkbox">
+                    <div class="flip-card">
+                        <div class="front">
+                            <img src="img/yiming.jpg" alt="" />
+                            <h1>Yiming Liu</h1>
+                            <h2>Small Business owner</h2>
+                            <b>scottl.2048@gmail.com</b>
+                            <p>Click to flip</p>
+                        </div>
+                        <div class="back">
+                            <h1>Close Friend</h1>
+                            <p>He just graduate from ANU and start a small Business as coffee shoper owner at Diskson</p>
+                            <hr />
+                            <p class="click">Click to flip</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class = 'label2'>
+                    <input type="checkbox" >
+                    <div class="flip-card">
+                        <div class="front">
+                            <img src="img/xuecheng.jpeg" alt="" />
+                            <h1>Xuecheng Zhang</h1>
+                            <h2>Software Engineer</h2>
+                            <b>horatiozhangxc@gmail.com</b>
+                            <p>Click to flip</p>
+                        </div>
+                        <div class="back">
+                            <h1>Good Friend</h1>
+                            <hr />
+                            <p>He is a graduate from M-MLCV at ANU and starting his career as software engineer at seeing machine</p>
+                            <hr />
+                            <p class="click">Click to flip</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class = 'label3'>
+                    <input type="checkbox" >
+                    <div class="flip-card">
+                        <div class="front">
+                            <img src="img/junyi.jpeg" alt="" />
+                            <h1>Junyi Meng</h1>
+                            <h2>Full stack Engineer</h2>
+                            <b>junyimen@gmail.com</b>
+                            <p>Click to flip</p>
+                        </div>
+                        <div class="back">
+                            <h1>Good friend</h1>
+                            <hr />
+                            <p>She got 5 yrs working experience before doing a master in ANU, who gave me a lot of help</p>
+                            <hr />
+                            <p class="click">Click to flip</p>
+                        </div>
+                    </div>
+                </label>
+
+                
+
+            </div>
+        </div>
+    </section>
+<!-- End of Gallery Section -->	
+
+<div class="spacer"></div>
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1>Wang Zhen</h1>
+      </div>
+      <h2>Thank you for visiting my Homepage. Leave me a feedback is encouraged.</h2>
+      <nav>
+        <div class = "row-dir">
+            <div class = "col-dir-top">
+                <h3 class="top-title">
+                    <span>A1 Deliverables</span>
+                </h3>
+                <ul>
+                    <li><a href="pages/sitemap.html">Sitemap</a></li>
+                    <li><a href="pages/sourcelog.html">Sourcelog</a></li>
+                    <li><a href="pages/feedback.html">Feedback</a></li>
+                    <li><a href="pages/me.html">me</a></li>
+                    <li><a href="image map/map.html">image map</a></li>
+				    <li><a href="image gallery/gallery.html">image gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class = "col-dir-bottom">
+                <h3 class="top-title">
+                    <span>Homepage</span>
+                </h3>
+                <ul>
+                    <li><a href="https://wangzhen-ryan.github.io">Portfolio</a></li>
+                    <li><a href="news.asp">Life</a></li>
+                    <li><a href="contact.asp">Education</a></li>
+                    <li><a href="about.asp">Work</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+      
+      <p>Copyright © 2023 Zhen Wang. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+</body>
+</html>
+

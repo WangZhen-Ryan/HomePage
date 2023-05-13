@@ -1,0 +1,187 @@
+/* Gallery container */
+.img-gallery-container{
+  margin: 0 auto;
+  /* grid-column-start: 2;
+  grid-column-end: 5; */
+}
+
+/* use grid to style*/
+#img-gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5px;
+  grid-auto-flow: dense;
+  
+  grid-template-areas: 
+    "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+    "img1 img2 img3 img4"
+    "img5 img5 img3 img6"
+    "img7 img7 img8 img8"
+    "img9 img9 img10 img10"
+    ;
+}
+
+/* apply general style to all imgs */
+#img-gallery > *{
+  width: 100%;
+  height: 300px;
+  /* object-fit: cover; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  /* transition: 0.3s; */
+}
+
+/* apply specific style to each image and link each picture */
+#img-gallery h2{
+  text-align: left;
+  font-size: 2.5em;
+  grid-area: gallery-h2;
+  height: 50px;
+}
+
+/* apply event image to the grid */
+#img-gallery .img1{
+  grid-area: img1;
+  background-image: url("./gallery_img/thumbnail/img1_tn.png");
+}
+
+/* apply friends image to the grid */
+#img-gallery .img2{
+  grid-area: img2;
+  background-image: url("./gallery_img/thumbnail/img2_tn.png");
+}
+
+/* apply event image to the grid */
+#img-gallery .img3{
+  grid-area: img3;
+  background-image: url("./gallery_img/thumbnail/img3_tn.png");
+  height: 610px;
+}
+
+/* apply study image to the grid */
+#img-gallery .img4{
+  grid-area: img4;
+  background-image: url("./gallery_img/thumbnail/img4_tn.png");
+  background-size: 250%;
+  background-position: 100%, 10%;
+}
+
+/* apply friends image to the grid */
+#img-gallery .img5{
+  grid-area: img5;
+  background-image: url("./gallery_img/thumbnail/img5_tn.png");
+}
+
+/* apply friends image to the grid */
+#img-gallery .img6{
+  grid-area: img6;
+  background-image: url("./gallery_img/thumbnail/img6_tn.png");
+}
+
+/* apply classmate image to the grid */
+#img-gallery .img7{
+  grid-area: img7;
+  background-image: url("./gallery_img/thumbnail/img7_tn.png");
+}
+
+/* apply friends image to the grid */
+#img-gallery .img8{
+  grid-area: img8;
+  background-image: url("./gallery_img/thumbnail/img8_tn.png");
+}
+
+/* apply friends image to the grid */
+#img-gallery .img9{
+  grid-area: img9;
+  background-image: url("./gallery_img/thumbnail/img9_tn.png");
+}
+
+/* apply friends image to the grid */
+#img-gallery .img10{
+  grid-area: img10;
+  background-image: url("./gallery_img/thumbnail/img10_tn.png");
+}
+
+/* Style the words's position behind the pictures */
+.img-gallery-container > * div{
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+
+  /* align and center the words inside the picture */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* cont. hover effect */
+.img-gallery-container > * div:hover{
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+/* Style the words front behind the pictures */
+.img-gallery-container > * a{
+  font: 1em sans-serif;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+/* Style the pop-up window upon clicked*/
+.new-img-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Style the image inside the pop-up window upon clicked*/
+.new-img-window img{
+  max-height: 80vw;
+  max-width: 80vh;
+}
+
+/* Style for the buttom */
+.prev-btn{
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: aliceblue;
+  position: fixed;
+  top: 50%;
+  z-index: 120;
+  cursor: pointer;
+}
+
+.prev-btn:hover{
+  opacity: 0.6;
+}
+
+.next-btn{
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: aliceblue;
+  position: fixed;
+  top: 50%;
+  z-index: 120;
+  cursor: pointer;
+}
+
+.next-btn:hover{
+  opacity: 0.6;
+}
