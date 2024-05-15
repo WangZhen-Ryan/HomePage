@@ -1,17 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>My Footprint</title>
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <!-- <link rel="stylesheet" href="../default.css"> -->
     <link rel="stylesheet" href="map.css">
   </head>
+
   <body>
+    <!-- remember to include the js function for view btn -->
+    <script src="../view.js"></script>
+    <!-- The header section -->
+    <header class="main-header">
+      <!-- Logo and navigation menu section -->
+      <div class="header-logo">
+          <img src="../img/icon.png" alt="my logo">
+
+          <!-- the hamburger -->
+          <div class="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </div>
+
+          <nav class="header-nav">
+              <ul>
+                  <li><a href="../pages/sitemap.html">HOME</a></li>
+                  <li><a href="../image%20gallery/gallery.html">GALLERY</a></li>
+                  <li><a href="https://wangzhen-ryan.github.io">PORTFOLIO</a></li>
+                  <li><a href="../pages/me.html">ABOUT ME</a></li>
+                  <li><a href="../pages/login.html">CONTACT</a></li>
+
+              </ul>
+          </nav>
+      </div>
+
+      <div class ="btns">
+        <a onclick="myFunction()"> View </a>
+      </div>
+    
+      <!-- Social media links section -->
+      <div class="header-social-media">
+          <a href="https://www.facebook.com/zhen.wang.98229">
+              <div class="header-social-media-fb"></div>
+          </a>
+          <a href="https://twitter.com/WangZhen_Ryan">
+              <div class="header-social-media-tw"></div>
+          </a>
+          <a href="https://www.linkedin.com/in/wangzhen-ryan/">
+              <div class="header-social-media-linkedin"></div>
+          </a>
+          <a href="https://github.com/WangZhen-Ryan">
+              <div class="header-social-media-github"></div>
+          </a>
+      </div>
+  </header>
+  <!-- add js for onlick event of hamburger-->
+  <script>
+      hamburger = document.querySelector(".hamburger");
+      hamburger.onclick = function () {
+          var html = document.getElementsByTagName('html')[0];
+          var body = document.getElementsByTagName('body')[0];
+          var all = [html, body];
+          all.forEach(element => {
+              element.classList.toggle("active");
+          });
+          navMenu = document.querySelector(".header-nav");
+          navMenu.classList.toggle("active");
+      }
+
+  </script>
+  <!-- End of header section -->
+<section id = "image-map">
     <div class="container">
-      <h1>The Travel Map</h1>
+      <h2>The Travel Map</h2>
 
       <!-- define the class for labels -->
       <div class="img-class">
         <!-- add background image -->
-        <img src="worldmap.png" alt="img class" usemap="#travelmap">
+        <img src="worldmap.png" alt="img class">
         <!-- add labels -->
         <!--address dynamic window size using percentage position -->
         <!-- each label(item) have the dot point on the map and the corresponding description text -->
@@ -71,6 +140,54 @@
       </div>
 
     </div>
+</section>
     <script src="map.js"></script>
+    <!-- End of image map -->
+    <!-- Footer -->
+    <section id="footer">
+      <div class="footer container">
+          <div class="brand">
+              <h1>Wang Zhen</h1>
+          </div>
+          <h2>Thank you for visiting my Homepage. Leave me a feedback is encouraged.</h2>
+          <nav>
+              <div class="row-dir">
+                  <div class="col-dir-top">
+                      <h3 class="top-title-left">
+                          <span>A3 Deliverables</span>
+                      </h3>
+                      <ul>
+                          <li><a href="../assignment.html">assignment.html</a></li>
+                          <li><a href="../pages/sitemap.html">Sitemap</a></li>
+                          <li><a href="../pages/sourcelog.html">Sourcelog</a></li>
+                          <li><a href="../pages/feedback.html">Feedback</a></li>
+                          <li><a href="../pages/me.html">Me</a></li>
+                          <li><a href="../image%20map%20more/map.html">image map</a></li>
+                          <li><a href="../image%20gallery/gallery.html">image gallery</a></li>
+                          <li><a href="../validation/">Validation</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="col-dir-bottom">
+                      <h3 class="top-title-right">
+                          <span>Homepage</span>
+                      </h3>
+                      <ul>
+                          <li><a href="https://wangzhen-ryan.github.io">Portfolio</a></li>
+                          <li><a href="../image%20gallery/gallery.html">Life</a></li>
+                          <li><a href="../pages/ToDoList.html">ToDoList</a></li>
+                          <li><a href="../pages/feeds.html">Work</a></li>
+                      </ul>
+                  </div>
+              </div>
+
+          </nav>
+
+          <p>Copyright © 2023 Zhen Wang. All rights reserved</p>
+      </div>
+  </section>
+  <!-- End Footer -->
+
+      
   </body>
 </html>

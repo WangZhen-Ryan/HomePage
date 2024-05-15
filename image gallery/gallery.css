@@ -1,6 +1,7 @@
 /* Gallery container */
 .img-gallery-container{
-  margin: 0 auto;
+  margin: 20px 40px;
+  margin-bottom: 180px;
   /* grid-column-start: 2;
   grid-column-end: 5; */
 }
@@ -10,7 +11,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 5px;
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
   grid-auto-flow: dense;
   
   grid-template-areas: 
@@ -47,12 +49,16 @@
 #img-gallery .img1{
   grid-area: img1;
   background-image: url("./gallery_img/thumbnail/img1_tn.png");
+  background-size: 150%;
+  
 }
 
 /* apply friends image to the grid */
 #img-gallery .img2{
   grid-area: img2;
   background-image: url("./gallery_img/thumbnail/img2_tn.png");
+  background-size: 150%;
+
 }
 
 /* apply event image to the grid */
@@ -74,12 +80,14 @@
 #img-gallery .img5{
   grid-area: img5;
   background-image: url("./gallery_img/thumbnail/img5_tn.png");
+  
 }
 
 /* apply friends image to the grid */
 #img-gallery .img6{
   grid-area: img6;
   background-image: url("./gallery_img/thumbnail/img6_tn.png");
+  background-size: 150%;
 }
 
 /* apply classmate image to the grid */
@@ -98,6 +106,7 @@
 #img-gallery .img9{
   grid-area: img9;
   background-image: url("./gallery_img/thumbnail/img9_tn.png");
+  background-position: center 30%;
 }
 
 /* apply friends image to the grid */
@@ -113,7 +122,7 @@
 
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-
+  background-size: cover;
   /* align and center the words inside the picture */
   display: flex;
   justify-content: center;
@@ -124,6 +133,7 @@
 .img-gallery-container > * div:hover{
   opacity: 0.8;
   transition: 0.3s;
+  
 }
 
 /* Style the words front behind the pictures */

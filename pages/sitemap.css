@@ -1,26 +1,62 @@
-/* style the body */
+/* make footer smaller */
+#footer{
+	position: fixed;
+	bottom: 0;
+	height: 360px;
+  }
+  
+  #footer .footer{
+	white-space: inherit !important;
+  }
 
-main {
+/* the overall style for sitemap */
+#site{
+	margin-bottom: 360px;
+	display: flex;
+	height: 100vh;
+	background-color: #f5f5f5;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+}
+
+/* set some margin for the list map */
+#site .map{
+	margin-top: 100px;
+	margin-left: 50px;
+}
+/* set the h2 title with proper font and appear on the left top */
+#site h2{
+	text-align: left;
+	font-size: 2em;
+	grid-area: gallery-h2;
+	height: 50px;
+	color: #000;
+
+}
+/* style the body */
+#footer main {
 	margin: 20px;
 }
 
 /* set up the space between main header with list header*/
-main ul {
+#footer main ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-main ul li {
+#footer main ul li {
 	margin-bottom: 10px;
+
 }
 
 /* set up the space between list header and items below */
-main ul ul {
+#footer main ul ul {
 	margin-top: 5px;
 	margin-left: 20px;
 }
 
-main ul ul li {
+#footer main ul ul li {
 	margin-bottom: 5px;
 }

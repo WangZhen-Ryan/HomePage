@@ -1,0 +1,196 @@
+/* Make the footer smaller */
+#footer{
+  position: fixed;
+  bottom: 0;
+  height: 500px;
+}
+/* change the priorty of footer to make it smaller */
+#footer .footer{
+  white-space: inherit !important;
+}
+
+/* Home section */
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #707070;
+  background-size: cover;
+  background-position: center;
+}
+
+/* the overlay behind the form */
+.home::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+}
+
+.home.show::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Form container */
+.form_container {
+  position: absolute;
+  max-width: 320px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 101;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-out;
+}
+
+.home.show .form_container {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Signup form */
+.signup_form {
+  display: none;
+}
+
+/* it is not active, hide it */
+.form_container.active .signup_form {
+  display: block;
+}
+
+.form_container.active .login_form {
+  display: none;
+}
+
+/* Close button */
+.form_close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #0b0217;
+  font-size: 22px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* Form title */
+.form_container h2 {
+  font-size: 22px;
+  color: #0b0217;
+  text-align: center;
+}
+
+/* Input box */
+.input_box {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+}
+/* Text input style and add a border effect*/
+.input_box input {
+  height: 100%; 
+  width: 100%; 
+  border: none; 
+  outline: none; 
+  padding: 0 30px; 
+  color: #333; 
+  transition: all 0.2s ease; 
+  border-bottom: 1.5px solid #707070;
+}
+/* Change the border color when the input is focused */
+.input_box input:focus {
+  border-color: blue; 
+}
+/* Position the icon absolutely within the input box */
+.input_box i {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  font-size: 20px;
+  color: #707070; 
+}
+
+/* Position the email and password icons at the left side of the input box */
+.input_box i.email,
+.input_box i.password {
+  left: 0; 
+}
+
+/* Position the password hide/show icon at the right side of the input box */
+.input_box input:focus~i.email,
+.input_box input:focus~i.password {
+  color: blue; 
+}
+
+/* Position the password hide/show icon at the right side of the input box */
+.input_box i.pw_hide {
+  right: 0; 
+  font-size: 18px; 
+  cursor: pointer; 
+}
+/* Option field */
+.option_field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Links in the form */
+.form_container a {
+  color: blue; 
+  font-size: 12px; 
+}
+
+/* Add underline to the links on hover */
+.form_container a:hover {
+  text-decoration: underline; 
+}
+
+/* Display the checkboxes in a flex container and style it*/
+.checkbox {
+  display: flex; 
+  column-gap: 8px; 
+  white-space: nowrap; 
+}
+
+/* Set the accent color of the checkboxes to blue */
+.checkbox input {
+  accent-color: blue; 
+}
+
+/* style for text selection for the checkbox labels */
+.checkbox label {
+  font-size: 12px;
+  cursor: pointer; 
+  user-select: none; 
+  color: #0b0217; 
+}
+/* Set the background color and others of the button */
+.form_container .button {
+  background: blue; 
+  width: 100%; 
+  padding: 10px 0; 
+  border-radius: 10px; 
+}
+
+/* style the login/signup text*/
+.login_signup {
+  font-size: 12px; 
+  text-align: center;
+  margin-top: 15px; 
+}

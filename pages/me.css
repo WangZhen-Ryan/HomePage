@@ -1,41 +1,59 @@
 
-/* some default CSS that will be applied to all the pages */
+/* change the font family used */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 /* change the default front in paragraph */
-p {
-  font-size: 15px;
+#me p {
+  font-size: 17px;
   font-family: 'Lato', sans-serif;
 }
 
 body{
-	width: 1200px
+	width: fit-content;
+	margin-bottom: 360px;
+	height: 100vh;
 }
 
-a{
-	color: #000;
+/* make footer smaller */
+#footer{
+	position: fixed;
+	bottom: 0;
+	height: 360px;
+
+  }
+  
+  #footer .footer{
+	white-space: inherit !important;
+  }
+
+
+#me{
+	width: 100%;
 }
 
 /* make sure the main section and image section are side by side */
-.view{
+#me .view{
 	display: inline-block;
+	justify-content: center;
+	align-items: center;
 }
 
 /* adjust few padding */
-.view1{
+#me .view1{
 	width: 50%;
 	padding: 20px 120px;
 	float: left;
 }
 
-.view2{
+#me .view2{
 	width: 50%;
 	float: right;
 }
 
 /* adjust few padding */
-img{
+#me img{
 	padding: 90px;
+	max-height: 800px;
 }
 
 /* make the text align to its left */
@@ -44,32 +62,36 @@ img{
 }
 
 /* make the social button in a column arrange */
-.twitter-follow-button{
+#me .twitter-follow-button{
 	display: block;
 
 }
-
-.fb-share-button{
+/* make the sure the button are aligned */
+#me .fb-share-button{
 	display: block;
 	padding-top: 10px;
 	padding-left: 3px;
 }
 
-.linkedin-share-button{
+#me .linkedin-share-button{
 	display: block;
 	padding-top: 10px;
 	padding-left: 6px;
 }
 
 /* make sure the button section and more contact section are side by side */
-.api-button{
+#me .api-button{
 	width: 50%;
 	float: left;
 }
 
-.more{
+#me .more{
 	width: 50%;
 	padding-top: 50px;
 	padding-left: 60px;
 	float: right;
+}
+
+#me .reflection{
+	margin-top: 200px;
 }

@@ -2,26 +2,27 @@
   height: 100vh;
   background: url("img/self.png") no-repeat;
   background-size: 100%;
-  background-position: bottom 80px left 60px;
+  background-position: bottom 50% left 20%;
   /* margin-top: 200px;
   margin-bottom: 200px; */
   display: flex;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 7%;
 }
 
 .greeting {
   max-width: 600px;
 }
 
-.content{
+
+.greeting .content{
   position: absolute;
   top: 50px;
   left: 50px;
 }
 
 /* style for the btn display */
-.greeting .btns{
+/* .greeting .btns{
   position: absolute;
   left: 5%;
   bottom: 10%;
@@ -29,10 +30,10 @@
   display: flex;
   width: 150px;
   height: 50px;
-}
+} */
 
 /* style for the text anchor inside btn */
-.btns a{
+/* .btns a{
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -48,9 +49,9 @@
   letter-spacing: 1px;
   z-index: 1;
   overflow: hidden;
-}
+} */
 
-.btns a::before{
+/* .btns a::before{
   content: '';
   position: absolute;
   top: 0;
@@ -60,16 +61,16 @@
   background: #00bbff;
   z-index: -1;
   transition: 0.5s;
-}
+} */
 
 /* .btns a:hover{
   color: #00bbff;
 } */
 
-.btns a:hover::before{
+/* .btns a:hover::before{
   width: 100%;
 
-}
+} */
 
 
 
@@ -104,7 +105,7 @@
 .greeting h2::before{
   content: '';
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
   width: 100%;
   height: 100%;
@@ -116,7 +117,8 @@
 .greeting p{
   position: relative;
   padding-top: 20px;
-  font-size: 16px;
+  font-size: 20px;
+  
 }
 
 .greeting p::before{
@@ -173,7 +175,7 @@
 
 @keyframes activeImg {
   100%{
-    pointer-events: auto;
+    pointer-events: none;
   }
 }
 
@@ -219,11 +221,34 @@
  font-size: 3rem;
  margin-top: 5px;
  margin-bottom: 10px;
- line-height: 2.5 rem;
+ line-height: 2.5rem;
  font-weight: 300;
  letter-spacing: .05rem;
  color: #283074;
+ white-space: normal !important;
 }
+
+/* make a style for text under the main button */
+#main .main-bottom p {
+color: white;
+}
+#main .main-bottom h2 {
+color: white;
+pointer-events: none !important;
+}
+
+/* cancel the text effect */
+#main .main-bottom a:hover {
+text-decoration: none !important;
+}
+/* make text become black */
+#main .main-bottom a:hover h2 {
+color: black;
+}
+#main .main-bottom a:hover p {
+color: black;
+}
+
 
 /* align the items */
 #main .main-bottom{
@@ -399,7 +424,7 @@
  font-size: 2rem;
  margin-top: 1px;
  margin-bottom: 5px;
- line-height: 2.5 rem;
+ line-height: 2.5rem;
  font-weight: 300;
  letter-spacing: .05rem;
  color: #283074;
@@ -429,7 +454,6 @@
  /* Get the card effect of each item in the Highlight section */
  #highlight .highlights-item {
  display: flex;
- align-items: flex;
  justify-content: center;
  flex-direction: column;
  width: 80%;
@@ -492,7 +516,6 @@
 
 
 
-
 /* Gallery */
 
 #gallery{
@@ -513,15 +536,18 @@
  margin-bottom: 50px;
  color: #404fd5;
  text-transform: uppercase;
+
+ position: relative;
+ bottom: 30%;
 }
 
 
 /* make a style for text under the highlights titile */
 #gallery .highlights-header p {
- font-size: 1.5 rem;
+ font-size: 1.5rem;
  margin-top: 1px;
  margin-bottom: 5px;
- line-height: 2.5 rem;
+ line-height: 2.5rem;
  font-weight: 30;
  letter-spacing: .05rem;
  color: #283074;
@@ -536,7 +562,7 @@
  flex-direction: row;
  top: 40px;
  left: 50%;
- margin: 150px 30px;
+ margin: 250px 30px;
 }
 
 
@@ -544,12 +570,15 @@
 .labels {
  position: relative;
  display: block;
- width: 240px;
- height: 250px;
+ width: 340px;
+ height: 350px;
  perspective: 1000px;
  transform-style: preserve-3d;
  transform: translate(-50%, -50%);
  cursor: pointer;
+
+ margin-top: 250px;
+ margin-right: 150px;
  }
  
  /* styles the individual label elements */
@@ -697,7 +726,7 @@
 #footer {
  background-color: #6b6b6c;
  width: 100%;
- -moz-box-sizing: border-box;
+ /* -moz-box-sizing: border-box; */
  box-sizing: border-box;
  position: relative;
  max-height: 1%;
@@ -708,11 +737,13 @@
 
 /* style the footer in column direction */
 #footer .footer {
+ white-space: pre-line;
  flex-direction: column;
- padding: 20px;
+ /* padding: 20px; */
  position: relative;
  bottom: 0;
  width: 100%;
+ max-height: 500px;
 }
 
 /* style the footer's text*/
@@ -762,6 +793,35 @@
  padding: 20px;
 }
 
+/* make the two column style for ul in footer */
+#footer .row-dir .col-dir-top ul{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  width: 400px;
+  height: 100px;
+}
+
+#footer .row-dir .col-dir-top ul li {
+  margin-left: 1em;
+  white-space: pre-wrap;
+}
+
+
+/* make the one column style for ul in footer */
+#footer .row-dir .col-dir-bottom ul{
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  justify-content: start;
+  width: 200px;
+  height: 100px;
+}
+
+#footer .row-dir .col-dir-bottom ul li {
+  margin-left: 1em;
+  white-space: pre-wrap;
+}
+
 
 /* style the footer's nav menu more*/
 
@@ -791,21 +851,32 @@
 
 /* force the font to be different */
 #footer a {
- font-size: 10px;
+ font-size: 15px;
  font-family: Arial, sans-serif;
  color: #edecec;
 }
 
 /* force the aligment of h3 */
-#footer nav h3{
- color: rgb(3, 3, 3);
- font-size: 1.5rem;
- font-weight: 500;
- margin: 0;
- padding: 0;
- text-align: left;
+#footer nav .top-title-left{
+  color: rgb(3, 3, 3);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 100px;
 }
 
+/* force the aligment of h3 */
+#footer nav .top-title-right{
+  color: rgb(3, 3, 3);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 10px;
+}
 
 /* add hover effect to list items */
 #footer a:hover {

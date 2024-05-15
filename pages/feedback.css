@@ -1,5 +1,26 @@
+/* make footer smaller */
+#footer{
+  position: fixed;
+  bottom: 0;
+  height: 360px;
+}
+
+#footer .footer{
+  white-space: inherit !important;
+}
+/* Set style for the feedback */
+#feedback{
+  margin-bottom: 360px;
+}
+
+/* Set style for title*/
+#feedback h1{
+  text-align: left;
+  font-size: 2.5em;
+}
+
 /* Set style for the entire form */
-form {
+#feedback form {
   background-color: #f2f2f2;
   border: 2px solid lightblue;
   border-radius: 5px;
@@ -9,7 +30,7 @@ form {
   }
   
   /* Set style for the label text */
-  label {
+  #feedback label {
   font-weight: bold;
   font-size: 16px;
   display: block;
@@ -17,7 +38,7 @@ form {
   }
   
   /* Set style for the button */
-  .button {
+  #feedback .button {
   background-color: lightblue;
   color: white;
   padding: 10px 20px;
@@ -28,7 +49,7 @@ form {
   }
   
   /* Set style for input text and text area */
-  input[type=text], textarea {
+  #feedback input[type=text], textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -38,13 +59,13 @@ form {
   }
   
   /* Set style for input text and text area when focused */
-  input[type=text]:focus, textarea:focus {
+  #feedback input[type=text]:focus, textarea:focus {
   outline: none;
   border: 2px solid dodgerblue;
   }
   
   /* Set style for submit and reset buttons */
-  input[type=submit], input[type=reset] {
+  #feedback input[type=submit], input[type=reset] {
   background-color: lightblue;
   color: white;
   padding: 10px 20px;
@@ -55,16 +76,16 @@ form {
   }
   
   /* Set style for reset button */
-  input[type=reset] {
+  #feedback input[type=reset] {
   background-color: grey;
   }
   
   /* Set style for submit and reset buttons when hovered */
-  input[type=submit]:hover, input[type=reset]:hover {
+  #feedback input[type=submit]:hover, input[type=reset]:hover {
   background-color: dodgerblue;
   }
   
   /* Set style for submit and reset buttons when clicked */
-  input[type=submit]:active, input[type=reset]:active {
+  #feedback input[type=submit]:active, input[type=reset]:active {
   transform: translateY(1px);
   }

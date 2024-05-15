@@ -1,0 +1,161 @@
+/* we want this section to be full height */
+#Todo{
+  height: 100vh;
+}
+/* styling with the title*/
+#Todo h1{
+  text-align: left;
+  font-size: 2rem;
+}
+
+/* make footer smaller */
+#footer{
+  position: fixed;
+  bottom: 0;
+  height: 360px;
+}
+
+#footer .footer{
+  white-space: inherit !important;
+}
+
+/* make the todo list in center top*/
+#Todo form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    min-width: 100%;
+  
+}
+
+/* make the input box and button in same line */
+#Todo form input, form button{
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: #f5f5f5;
+  
+}
+
+/* make the button has a nice transition and hover effect */
+#Todo form button{
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#Todo form button:hover{
+  background: gray;
+}
+
+/* make the input box has a underline */
+#Todo form input{
+  border-bottom: 1px solid #333;
+}
+
+/* make the todo item display in center */
+#Todo .tocontainer{
+  display: flex;
+  position: absolute;
+  top: 25%;
+}
+
+#Todo .list{
+  /* remove the dot in front */
+  list-style: none; 
+}
+
+/* for added todo */
+#Todo .todo{
+  margin: 0.5rem;
+  background-color: lightgrey;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  width: 250px;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+}
+
+/* hover for todo */
+#Todo .todo:hover{
+  background-color: gray;
+  color: white;
+}
+
+#Todo .todo:hover form input{
+  color: white;
+}
+
+/* for added todo */
+#Todo .todo li{
+  flex: 1;
+}
+/* style for the trash bin */
+#Todo .trash-btn{
+  background-color: lightgrey;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+/* style for the complete bin */
+#Todo .complete-btn{
+  background-color: lightgrey;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* effect when you complete item */
+#Todo .completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+  background-color: lightgreen;
+}
+
+/* define the animation for remove */
+#Todo .delete-animation{
+  transform: translateY(8rem) rotateZ(150deg);
+  opacity: 0.5;
+}
+
+
+
+/* style the select menu */
+#Todo select{
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: #f5f5f5;
+  margin-left: 1rem;
+  cursor: pointer;
+  /* hide the original down symbol */
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* give select with a nice down symbol */
+#Todo select {
+  width: 268px;
+  padding: 0.5rem;
+  font-size: 2rem;
+  line-height: 1;
+  border: 0;
+  border-radius: 5px;
+  background: url('../img/down.png') no-repeat #ddd;
+  background-position-x: 210px;
+  background-position-y: -7px;
+}
+
+/* hover effect of select */
+#Todo select:hover{
+  background-color: gray;
+}

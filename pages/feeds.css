@@ -1,0 +1,97 @@
+/* CSS to center the LinkedIn profile badge */
+
+/* style the background color */
+#feeds {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  justify-content: start;
+  background-color: #f5f5f5;
+  margin-bottom: 360px;
+  font-family: Arial, sans-serif;
+  
+}
+
+#feeds .post {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* make footer smaller */
+#footer{
+  position: fixed;
+  bottom: 0;
+  height: 360px;
+}
+
+#footer .footer{
+  white-space: inherit !important;
+}
+/* style the text div to appear at the center left */
+#feeds .text,
+#feeds .post {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+
+}
+
+/* style the h1 header */
+#feeds h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* style the text div */
+#feeds .description {
+  color: #777;
+  margin-top: 10px;
+  /* Updated margin-top to create space below the heading */
+}
+
+/* style the badge and post to appear in two rows */
+#feeds .badge-base,
+#feeds .post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-left: 30%;
+}
+
+/* style the badge to appear at the center right */
+#feeds .badge-base {
+  max-width: 400px; /* Adjust the width to your desired size */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* style the text top of badge */
+#feeds .badge-base__link {
+  color: #0077B5;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  
+}
+/* style the left text */
+#feeds .text{
+  margin-left: 30%;
+}
+
+/* style the middle iframe */
+#feeds .post {
+  display: inline-block;
+  width: fit-content;
+}
+
+/* style the bottum iframe */
+#feeds .twitter-timeline-total {
+  display: flex;
+  width: fit-content;
+  margin-left: 30%;
+}

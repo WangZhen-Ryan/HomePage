@@ -1,8 +1,13 @@
-fa/* Default setting */
+/* Default setting */
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&display=swap');
+
 *{
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: 'Edu NSW ACT Foundation', cursive;
 }
 
 /* Set basic styles for the body */
@@ -10,24 +15,34 @@ body{
   min-height: 90vh;
   color: #fff;
   padding: 40px 10px;
-  background: linear-gradient(to bottom, #353232, #464343);
 }
 
 /* Set styles for the main heading */
-h1{
-  font-size: 2em;
-  margin-bottom: 25px;
-  text-align: center;
+h2{
+  text-align: left;
+  font-size: 2.5em;
+  grid-area: gallery-h2;
+  height: 50px;
+  color: #000;
 }
 
 /* Set styles for the main container */
 .container{
   max-width: 100vw;
   margin: auto;
-  padding: auto;
+  margin-bottom: 360px;
 }
 
+/* make footer smaller */
+#footer{
+  position: fixed;
+  bottom: 0;
+  height: 360px;
+}
 
+#footer .footer{
+  white-space: inherit !important;
+}
 
 /* Set styles for the main image class */
 .img-class{
@@ -136,7 +151,7 @@ h1{
 
 /* the france box is blocking the SH box, fix it by rotate it to the upper */
 .img-class .f .descrption{
-  left: calc(50% -11.5em);
+  left: calc(50% - 11.5em);
   bottom: 40px;
 }
 

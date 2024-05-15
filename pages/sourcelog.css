@@ -1,23 +1,35 @@
-html {
-    font-size: 10px;
-    font-family: 'Times New Roman', Times, serif;
+/* make footer smaller */
+#footer{
+    position: fixed;
+    bottom: 0;
+    height: 360px;
+  }
+  
+  #footer .footer{
+    white-space: inherit !important;
   }
 
-body {background-color: white}
+
+#source{
+    margin-bottom: 360px;
+}
 
 /* The main header */
-h1 {
+#source h1 {
       color: black;
       font-size: 30px;
 }
 
 /* set the table style */
-table{
+#source table{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+
     /* the source log table is put 50px below the heading of “Source Log” */
     margin-top: 50px;
 
     /* the table is as wide as 80% of the window size */
-    width: 80%;
+    width: 85%;
     /* the table has a single line blue border that is 2px wide */
     border-color: skyblue;
     border-style: solid;
@@ -29,34 +41,36 @@ table{
     font-size: 14px;
     border-collapse: collapse;
     caption-side: top;
+
+    height: fit-content;
 }
 
 /* an italic, blue caption with a font size of 13px */
-caption{
+#source caption{
     font-style: italic;
-    font-size: 16px;
+    font-size: 19px;
     color: skyblue;
 }
 
 /* set table color and padding */
-th{
+#source th{
     background-color:skyblue;
-    border-color: skyblue;
+    border-color: rgb(40, 55, 61);
     color: white;
     /* the texts in the table are 10px away from the border */
     padding-left: 10px; 
-    font-size: 15px;
+    font-size: 18px;
 }
 
 /* set table's element row color and padding */
-td{
+#source td{
     border-color: skyblue;
-    padding-left: 10px;
+    padding-left: 15px;
 }
 
 
 
 /* optional styling for highlighting table row on hover */
-tr:hover {
+#source tr:hover {
     background-color: #f5f5f5;
 }

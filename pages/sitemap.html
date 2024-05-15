@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="utf-8">
 	<title>Sitemap</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../default.css">
 	<link rel="stylesheet" type="text/css" href="sitemap.css">
     <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
 </head>
+
 <body>
+    <!-- remember to include the js function for view btn -->
+    <script src="../view.js"></script>
 	<!-- The header section -->
     <header class="main-header">
         <!-- Logo and navigation menu section -->
@@ -24,45 +30,115 @@
         <nav class="header-nav">
             <ul>
             <li><a href="sitemap.html">HOME</a></li>
-            <li><a href="../image gallery/gallery.html">GALLERY</a></li>
+            <li><a href="../image%20gallery/gallery.html">GALLERY</a></li>
             <li><a href="me.html">ABOUT ME</a></li>
             <li><a href="feedback.html">CONTACT</a></li>
             </ul>
         </nav>
         </div>
+        <div class ="btns">
+            <a onclick="myFunction()"> View </a>
+        </div>        
         <!-- Social media links section -->
         <div class="header-social-media">
         <a href="https://www.facebook.com/zhen.wang.98229"><div class="header-social-media-fb"></div></a>
-        <a href="https://twitter.com/home"><div class="header-social-media-tw"></div></a>
+        <a href="https://twitter.com/WangZhen_Ryan"><div class="header-social-media-tw"></div></a>
         <a href="https://www.linkedin.com/in/wangzhen-ryan/"><div class="header-social-media-linkedin"></div></a>
         <a href="https://github.com/WangZhen-Ryan"><div class="header-social-media-github"></div></a>
         </div>
     </header>
+        <!-- add js for onlick event of hamburger-->
+        <script>
+            hamburger = document.querySelector(".hamburger");
+            hamburger.onclick = function () {
+                var html = document.getElementsByTagName('html')[0];
+                var body = document.getElementsByTagName('body')[0];
+                var all = [html, body];
+                all.forEach(element => {
+                    element.classList.toggle("active");
+                });
+                navMenu = document.querySelector(".header-nav");
+                navMenu.classList.toggle("active");
+            }
+      
+        </script>
     <!-- End of header section -->
+    <main>
+    <section id = "site">
+       
+            <h2>Site Map</h2>
 
-	<main>
-		<h2>Site Map</h2>
-		<ul>
-			<li><a href="https://stuweb.cecs.anu.edu.au/~u6904458/">Home</a></li>
-			<li><a href="me.html">About Me</a></li>
-            <li>Assignment Diverables
+            <div class = "map">
                 <ul>
-                    <li><a href="sitemap.html">Sitemap</a></li>
-                    <li><a href="sourcelog.html">Sourcelog</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="me.html">my passion</a></li>
-
-					<li><a href="../image map/map.html">image map</a></li>
-                    <li><a href="../image gallery/gallery.html">image gallery</a></li>
+                    <li><a href="https://stuweb.cecs.anu.edu.au/~u6904458/">Home</a></li>
+                    <li><a href="me.html">About Me</a></li>
+                    <li>Assignment Diverables
+                        <ul>
+                            <li><a href="../assignment.html">assignment.html</a></li>
+                            <li><a href="sitemap.html">Sitemap</a></li>
+                            <li><a href="sourcelog.html">Sourcelog</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <li><a href="me.html">About Me</a></li>
+                            <li><a href="../image%20map%20more/map.html">Image Map</a></li>
+                            <li><a href="../image%20gallery/gallery.html">Image Gallery</a></li>
+                            <li><a href="feeds.html">Scoial Feeds</a></li>
+                            <li><a href="../validation">Validation</a></li>
+                        </ul>
+                    </li>
+                    <li>Blog
+                        <ul>
+                            <li><a href="https://wangzhen-ryan.github.io">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="feedback.html">Contact</a></li>
                 </ul>
-            </li>
-			<li>Blog
-				<ul>
-					<li><a href="https://wangzhen-ryan.github.io">Portfolio</a></li>
-				</ul>
-			</li>
-			<li><a href="feedback.html">Contact</a></li>
-		</ul>
-	</main>
+            </div>
+        
+    </section>
+    </main>
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand">
+                <h1>Wang Zhen</h1>
+            </div>
+            <h2>Thank you for visiting my Homepage. Leave me a feedback is encouraged.</h2>
+            <nav>
+                <div class="row-dir">
+                    <div class="col-dir-top">
+                        <h3 class="top-title-left">
+                            <span>A3 Deliverables</span>
+                        </h3>
+                        <ul>
+                            <li><a href="../assignment.html">assignment.html</a></li>
+                            <li><a href="sitemap.html">Sitemap</a></li>
+                            <li><a href="sourcelog.html">Sourcelog</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <li><a href="me.html">Me</a></li>
+                            <li><a href="../image%20map%20more/map.html">image map</a></li>
+                            <li><a href="../image%20gallery/gallery.html">image gallery</a></li>
+                            <li><a href="../validation/">Validation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-dir-bottom">
+                        <h3 class="top-title-right">
+                            <span>Homepage</span>
+                        </h3>
+                        <ul>
+                            <li><a href="https://wangzhen-ryan.github.io">Portfolio</a></li>
+                            <li><a href="../image%20gallery/gallery.html">Life</a></li>
+                            <li><a href="ToDoList.html">ToDoList</a></li>
+                            <li><a href="feeds.html">Work</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+
+            <p>Copyright © 2023 Zhen Wang. All rights reserved</p>
+        </div>
+    </section>
+    <!-- End Footer -->
 </body>
 </html>

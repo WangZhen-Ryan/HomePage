@@ -1,0 +1,190 @@
+/* timeline */
+
+/* Styles for the timeline section */
+#timeline-section {
+  /* background-color: #06065d; */
+  display: none;
+  min-height: 100%;
+  padding: 100px 15px;
+}
+
+/* Styles for the main container */
+.main-container {
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(245, 245, 245);
+  padding: 50px 10px;
+  display: grid;
+  place-items: center;
+  border-radius: 29px;
+  box-shadow: rgb(10, 2, 125, 0.3) 10px 0px 20px 10px;
+  margin-top: 100px;
+}
+
+/* Styles for the headline */
+.main-container .headline {
+  font-size: 45px;
+  font-weight: 500;
+  color: rgb(109, 22, 223);
+  position: relative;
+  margin-bottom: 80px;
+}
+
+/* Styles for the underline effect after the headline */
+.headline::after {
+  content: " ";
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  left: 50%;
+  bottom: -5px;
+  background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+  transform: translateX(-50%);
+}
+
+/* Styles for the timeline items container */
+.items-timeline {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Styles for the vertical line between timeline items */
+.items-timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #0077ff;
+  left: calc(50% - 1px);
+}
+
+/* Styles for each timeline item */
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+/* Styles for the last timeline item (remove bottom margin) */
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Styles for odd-numbered timeline items (right alignment) */
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+/* Styles for even-numbered timeline items (left alignment) */
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+/* Set styles for the dots used to navigate the image */
+.items-timeline .dot {
+  height: 16px;
+  width: 16px;
+  background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+}
+
+/* Set styles for the animation of the dots that is centering it vertically and horizontally inside the dot element. */
+.items-timeline .dot:after{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1,1);
+  pointer-events: none;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid #0e1dea;
+  transition: border-color 1s linear;
+  animation: dot-pulse 4s linear infinite;
+}
+
+/* Set styles for the animation that makes the dot appear to pulse with increasing and decreasing opacity.*/
+@keyframes dot-pulse{
+
+  0%{
+    transform: translate(-50%, -50%) scale(1,1);
+    opacity: 0;
+  }
+
+  20%{
+    transform: translate(-50%, -50%) scale(1.5,1.5);
+    opacity: 0.9;
+  }
+
+  50%{
+    transform: translate(-50%, -50%) scale(2,2);
+    opacity: 0.9;
+  }
+
+  100%{
+    transform: translate(-50%, -50%) scale(2,2);
+    opacity: 0.9;
+  }
+}
+
+/* Styles for the date in each timeline item */
+.timeline-item .date {
+  font-size: 18px;
+  color: blue;
+  margin: 6px 0 15px;
+}
+
+/* Styles for the content container in each timeline item */
+.timeline-item .content {
+  background-color: rgb(76, 76, 245);
+  opacity: 0.7;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+/* Styles for the heading in the content container */
+.timeline-item .content h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/* Styles for the paragraph text in the content container */
+.timeline-item .content p {
+  color: #c8c8c8;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+/* Responsive Styles */
+@media(max-width: 767px) {
+  .items-timeline::before {
+    left: 7px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+
+ .items-timeline .dot {
+    left: 0;
+  }
+}

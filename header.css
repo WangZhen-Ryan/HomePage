@@ -126,6 +126,39 @@ a {
   z-index: 1;
 }
 
+
+
+/* style for the btn display */
+.main-header .btns{
+  background-color: #4752cb;
+  border-radius: 18px;
+  color: #fff;
+  /* justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%; */
+  border: 2px solid #00bbff;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 5px 15px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  position: relative;
+  left: -70px;
+}
+
+/* style for the text anchor inside btn */
+
+.main-header .btns:hover{
+  opacity: 0.5;
+}
+
+/* style the text inside the btn */
+.main-header .btns a{
+  color: #ffffff;
+}
+
 /* dynamic adjust the display from nav to hamburger according to the width */
 @media only screen and (max-width: 1300px) {
   .header-nav{
@@ -133,14 +166,14 @@ a {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .header-nav{
-    display: 10px 10px;
+    padding: 10px 10px;
   }
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1007px) {
 
   /* style the hamburger*/
   .hamburger{
@@ -182,16 +215,23 @@ a {
     height: 0;
     position: fixed;
     top: 0;
-    left: 100px;
+    left: 80px;
     right: 0;
-    width: 50vw;
+    width: 80vw;
     background: #fff;
     transition: 0.5s;
     overflow: hidden;
   }
+  
  /* resize the hearder when click hamburger*/
   .header-nav.active{
     height: 130px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
   }
 
   .header-nav ul{
@@ -206,8 +246,16 @@ a {
   /* reformate the hearder list when click hamburger*/
   .header-nav.active ul{
     opacity: 1;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    justify-content: start;
   }
 
+  /* hide view btn */
+  
+  .main-header .btns{
+    display: none;
+  }
 
   html, body {
     overflow: auto;

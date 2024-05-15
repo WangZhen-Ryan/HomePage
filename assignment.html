@@ -16,15 +16,15 @@
   <li>later, link this page to your website's index.html page</li>
   <li>over time, link each assignment task listed below to its location in your website as soon as you have started it</li>
   <li>replace the "notes" paragraph with your notes or
-delete if you have no notes - your notes will help us understand and
-mark your site so you should explain things. Maybe you did a task
-differently from the way we specified it, either because your way is
-better (tell us) or minimally or not at all to fit in with your site's
-look and feel (tell us) or ... (also tell us). So, for example, a video
-might spoil the look and feel. What you do is make one anyway, link to
-it from this assessment.html page and explain in the <i>Notes</i> why
-it's not linked to from your public version of your web site. You can
-style this page as your like, so long as you keep the links to the
+    delete if you have no notes - your notes will help us understand and
+    mark your site so you should explain things. Maybe you did a task
+    differently from the way we specified it, either because your way is
+    better (tell us) or minimally or not at all to fit in with your site's
+    look and feel (tell us) or ... (also tell us). So, for example, a video
+    might spoil the look and feel. What you do is make one anyway, link to
+    it from this assessment.html page and explain in the <i>Notes</i> why
+    it's not linked to from your public version of your web site. You can
+    style this page as your like, so long as you keep the links to the
 assignment tasks.</li>
   <li>provide details for your best student forums posts where indicated</li>
   <li>provide the date you attended the continuous improvement session where indicated</li>
@@ -89,34 +89,67 @@ to next image or previous image. It makes sure that the next image of the last o
 <p><br></p>
 <p><br></p>
 <h1><b>3.0 Part 3 Tasks</b></h1>
+<b><h2>It is recommended that use chrome to open </h2></b>
+<b><h2>When the window is small,the footer will be minimized. Hover your mouse over it, it will display in full height. </h2></b>
+<ul>
+  <ul> <b>Do not mark below, these are for my own reference.</b>
+  <li>The portfolio section for my academic projects. You can view it by clicking PORTFOLIO in the header. It is for my own reference and do not mark this. Refer to <a href = "https://wangzhen-ryan.github.io/"> Source code on Github</a></li>
+  <li>Click CONTACT in the header twice, it will lead you to log in interface. Refer to <a href = "pages/login.css"> login css file</a> and <a href = "pages/login.html"> login html file. </a>
+    It is for user to leave a comment in blog. It needs some mangement with database and php, so I did not include it for this assignment purpose.</li>
+</ul>
+
 <h2><b>3.1 Reflections</b></h2>
 <p>1. what you learn from A approach, and what could do differerntly, what's the mistake...</p>
-<p>Replace this line with your URL link to this element in your website.</p>
-<p>Notes: Provide any notes you may have about this element here.</p>
+<p>For your convenience, you can view it at <a href = "pages/reflection.html">reflection</a></p>
+<p>It is linked to <a href = "pages/me.html">About Me</a>, although I linked it to the About Page, it is not related to my website's overall purpose.</p>
 <h2><b>3.2 Alternative CSS</b></h2>
-<p>Replace this line with your URL link to this element in your website.</p>
-<p>Notes: Provide any notes you may have about this element here.</p>
-<h2><b>3.3 Social Networking Button(s)</b></h2>
-<a href = "https://developers.facebook.com/docs/archive/docs/plugins/follow-button/?locale=en_US">The follow button for facebook is no longer supported </a>
-<p>Replace this line with your URL link to this element in your website.</p>
-<p>Notes: Provide any notes you may have about this element here.</p>
-<h2><b>3.4 Social Networking Feed(s)</b></h2>
-<p>Replace this line with your URL link to this element in your website.</p>
-<p>Notes: Provide any notes you may have about this element here.</p>
-<h2><b>3.5 CSS and HTML Validation</b></h2>
-<p>Replace this line with your URL link to this element in your website.</p>
-<p>Notes: Provide any notes you may have about this element here.</p>
-<h2><b>3.6 Something Original</b></h2>
+<p> Note that there are two css I design</p>
 
-<p>use chrome to open </p>
-<p>Replace this line with your URL link to this element in your website.</p>
-<p>Notes: Provide any notes you may have about this element here.</p>
+<ul>
+  <li>  For the index.html: </li>
+  <ul>  <li> I design a alterview view specificly for index.html, you can click the <b>VIEW</b> button in the header of index.html to activate it. 
+    It hides More about Me section and displays the new Timeline section instead. It also changed the background image, change fonts, add more text to the first page.</li>
+  <li>The code is at <a href="alternative.css">index alternative code</a></li></ul>
+  <li>  For the rest page: </li>
+  <ul>  <li> I design a generic print friendly version css for all other pages part from index.html. You can click the <b>VIEW</b> button in the header of all other pages to activate it. </li>
+  <li>The code is at <a href="print.css">print friendly css code</a></li></ul>
+</ul>
+<h2><b>3.3 Social Networking Button(s)</b></h2>
+<p>Refer to the follow section in <a href = "pages/me.html">About Me</a></p>
+<p>Note that the follow button for facebook is no longer supported<a href = "https://developers.facebook.com/docs/archive/docs/plugins/follow-button/?locale=en_US">check here</a> </p>
+
+<h2><b>3.4 Social Networking Feed(s)</b></h2>
+<p><a href = "pages/feeds.html">The social feeds for linkedin website</a></p>
+<h2><b>3.5 CSS and HTML Validation</b></h2>
+<p><a href = "validation/css%20validation%20combined.pdf">The combined validation pdf for all css files</a></p>
+<p>Note that there is no error or warning for css files </p>
+<p><a href = "validation/html%20validation%20combined.pdf">The combined validation pdf for all html files</a></p>
+<p>Note that there is error appear in only index.html, all other pages are fine.</p>
+<ul>
+  <li>Line 286, 305, 325, 346. This error appears four times with the same usage. I deliberately design it for the filp card function in the connection section. 
+    Error of div element is child of label tag, 
+    The purpose of design this entire structure within a 
+    label tag is to make the entire card clickable. 
+    Clicking anywhere within the label, including the card content, will toggle the associated checkbox's state. 
+    It triggers actions of flipping when interacting with the card. The div element within the label tag is used to contained the information of this person.</li>
+</ul>
+
+<h2><b>3.6 Something Original</b></h2>
+  <ul> <b>Mark</b> the Todo functionality
+  <li>This is the to-do list for myself. It uses advanced javascript that allows you to add and remove things. Play around with it to complete or delete the todo ltems. There is a filter on the right hand side to display the completed items. It supports sycn with the local cache. 
+    Refer to <a href = "pages/ToDoList.css"> todo css file</a>, <a href = "pages/ToDoList.html"> todo html file</a> and <a href="pages/ToDoList.js">todo js file </a></li>
+  </ul>
+  <ul> Additional features that you can <b>Mark</b> below
+      <li>The preloader functionality for index.html. Refer to <a href = "style.css"> style css file</a> and <a href = "index.html"> index html file</a></li>
+      <li>The responsive header that shrinked into hamburger when the width of the window size is less than 1007px. Click the hamburger and the menu will pop up.<a href = "header.css"> Refer there</a></li>
+  </ul>
+
 <p><br></p>
 <h1><b>Other</b></h1>
 <h2><b>Continuous Improvement Session</b></h2>
-<p>Replace this line with the date you attended the continuous improvement session.</p>
+<p>I attended the continuous improvement session on May 5 Friday Joey Lab 11 a.m.</p>
 <h2><b>Report</b></h2>
-<p>Replace this line with the local URL to your report.</p>
+<p><a href = "u6904458-report1710.pdf">View the report here</a></p>
 <p><br></p>
 
 

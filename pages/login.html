@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website with Login & Registration Form</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="../default.css">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../footer.css">
+  <style>
+    /* style for the btn display */
+    .button {
+      background-color: blue;
+      border-radius: 18px;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      font-size: 17px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border: 2px solid #fff;
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .button:active {
+      transform: scale(0.98);
+    }
+
+    /* style for the text anchor inside btn */
+
+    .button:hover {
+      opacity: 0.5;
+    }
+
+  </style>
+</head>
+
+<body><!-- The header section -->
+  <header class="main-header">
+    <!-- Logo and navigation menu section -->
+    <div class="header-logo">
+      <img src="../img/icon.png" alt="my logo">
+
+      <!-- the hamburger -->
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <nav class="header-nav">
+        <ul>
+          <li><a href="sitemap.html">HOME</a></li>
+          <li><a href="../image gallery/gallery.html">GALLERY</a></li>
+          <li><a href="https://wangzhen-ryan.github.io">PORTFOLIO</a></li>
+          <li><a href="me.html">ABOUT ME</a></li>
+          <li><a href="feedback.html">CONTACT</a></li>
+
+          <button class="button" id="form-open"> Login </button>
+        </ul>
+      </nav>
+    </div>
+    <!-- Social media links section -->
+    <div class="header-social-media">
+      <a href="https://www.facebook.com/zhen.wang.98229">
+        <div class="header-social-media-fb"></div>
+      </a>
+      <a href="https://twitter.com/home">
+        <div class="header-social-media-tw"></div>
+      </a>
+      <a href="https://www.linkedin.com/in/wangzhen-ryan/">
+        <div class="header-social-media-linkedin"></div>
+      </a>
+      <a href="https://github.com/WangZhen-Ryan">
+        <div class="header-social-media-github"></div>
+      </a>
+    </div>
+  </header>
+      <!-- add js for onlick event of hamburger-->
+      <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function () {
+            var html = document.getElementsByTagName('html')[0];
+            var body = document.getElementsByTagName('body')[0];
+            var all = [html, body];
+            all.forEach(element => {
+                element.classList.toggle("active");
+            });
+            navMenu = document.querySelector(".header-nav");
+            navMenu.classList.toggle("active");
+        }
+
+    </script>
+  <!-- End of header section -->
+
+  <section class="home">
+    <div class="form_container">
+      <i class="uil uil-times form_close"></i>
+      <!-- Login From -->
+      <div class="form login_form">
+        <form action="#">
+          <h2>Login</h2>
+          <div class="input_box">
+            <input type="email" placeholder="Enter your email"  />
+            <i class="uil uil-envelope-alt email"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Enter your password"  />
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+          <div class="option_field">
+            <span class="checkbox">
+              <input type="checkbox" id="check" />
+              <label for="check">Remember me</label>
+            </span>
+            <a href="#" class="forgot_pw">Forgot password?</a>
+          </div>
+          <button class="button">Login Now</button>
+          <button class="button" onclick= "location.href='feedback.html'" type="button"> Leave Feedback without Login </button>
+          <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+        </form>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form signup_form">
+        <form action="#">
+          <h2>Signup</h2>
+          <div class="input_box">
+            <input type="email" placeholder="Enter your email" required />
+            <i class="uil uil-envelope-alt email"></i> <!-- Email icon -->
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Create password" required />
+            <i class="uil uil-lock password"></i> <!-- Password icon -->
+            <i class="uil uil-eye-slash pw_hide"></i> <!-- Eye icon for password visibility -->
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Confirm password" required />
+            <i class="uil uil-lock password"></i> <!-- Password icon -->
+            <i class="uil uil-eye-slash pw_hide"></i> <!-- Eye icon for password visibility -->
+          </div>
+          <button class="button">Signup Now</button> <!-- Signup button -->
+          <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div> <!-- Login link -->
+        </form>
+      </div>
+      </div>
+      </section>
+
+      <script src="login.js"></script> 
+
+
+   <!-- Footer -->
+   <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1>Wang Zhen</h1>
+      </div>
+      <h2>Thank you for visiting my Homepage. Leave me a feedback is encouraged.</h2>
+      <nav>
+        <div class="row-dir">
+          <div class="col-dir-top">
+            <h3 class="top-title-left">
+              <span>A3 Deliverables</span>
+            </h3>
+            <ul>
+              <li><a href="../assignment.html">assignment.html</a></li>
+              <li><a href="../pages/sitemap.html">Sitemap</a></li>
+              <li><a href="../pages/sourcelog.html">Sourcelog</a></li>
+              <li><a href="../pages/feedback.html">Feedback</a></li>
+              <li><a href="../pages/me.html">Me</a></li>
+              <li><a href="../image%20map%20more/map.html">image map</a></li>
+              <li><a href="../image%20gallery/gallery.html">image gallery</a></li>
+              <li><a href="../validation/">Validation</a></li>
+            </ul>
+          </div>
+
+          <div class="col-dir-bottom">
+            <h3 class="top-title-right">
+              <span>Homepage</span>
+            </h3>
+            <ul>
+              <li><a href="https://wangzhen-ryan.github.io">Portfolio</a></li>
+              <li><a href="../image%20gallery/gallery.html">Life</a></li>
+              <li><a href="ToDoList.html">ToDoList</a></li>
+              <li><a href="../pages/feeds.html">Work</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+
+      <p>Copyright © 2023 Zhen Wang. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+
+</body>
+
+</html>
